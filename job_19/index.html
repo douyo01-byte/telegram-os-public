@@ -2,878 +2,612 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>educate B LP v20</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>educate B LP v21</title>
 <style>
-:root {
-  --bg:#f7f2ed;
+:root{
+  --bg:#f6f1eb;
   --paper:#fffdfa;
-  --ink:#1f1f22;
-  --sub:#6f6660;
-  --line:#eadfd6;
+  --line:#e8ddd2;
+  --ink:#2d2723;
+  --sub:#6f655d;
+  --accent:#1f1f22;
+  --accent2:#3a302a;
+  --soft:#efe5db;
+  --soft2:#f7efe8;
 }
-* { box-sizing:border-box; }
-body {
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
   margin:0;
   font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic","Noto Sans JP",sans-serif;
-  background:var(--bg);
   color:var(--ink);
-  line-height:1.75;
+  background:var(--bg);
+  line-height:1.8;
 }
-img { display:block; max-width:100%; }
-.wrap {
-  width:min(100%,1180px);
+img{display:block;max-width:100%}
+a{text-decoration:none}
+.wrap{
+  width:min(100%,1120px);
   margin:0 auto;
-  padding:18px 14px 72px;
+  padding:0 16px 120px;
 }
-.hero {
-  padding:18px 0 28px;
+.section{padding:56px 0}
+.eyebrow{
+  font-size:12px;
+  letter-spacing:.16em;
+  color:#8f7c71;
+  margin:0 0 14px;
 }
-.hero-grid {
+.h1{
+  margin:0;
+  font-size:clamp(34px,7vw,64px);
+  line-height:1.12;
+  letter-spacing:-.04em;
+}
+.h2{
+  margin:0 0 16px;
+  font-size:clamp(26px,4vw,42px);
+  line-height:1.2;
+  letter-spacing:-.03em;
+}
+.lead{
+  margin:18px 0 0;
+  font-size:clamp(15px,2.3vw,19px);
+  color:var(--sub);
+}
+.card{
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:28px;
+  padding:24px;
+}
+.hero{
+  padding:28px 0 40px;
+}
+.hero-grid{
   display:grid;
-  grid-template-columns:1.05fr .95fr;
-  gap:20px;
+  grid-template-columns:1.02fr .98fr;
+  gap:24px;
   align-items:center;
 }
-.eyebrow {
-  font-size:14px;
-  letter-spacing:.14em;
-  color:#93776d;
-  margin-bottom:18px;
+.hero-copy{
+  padding:10px 0;
 }
-h1 {
-  margin:0 0 18px;
-  font-size:clamp(34px,9vw,58px);
-  line-height:1.12;
-  letter-spacing:-0.04em;
-}
-.lead {
-  margin:0 0 22px;
+.hero-copy .sublead{
+  margin:18px 0 0;
   color:var(--sub);
-  font-size:clamp(16px,4.8vw,24px);
+  font-size:16px;
 }
-.benefit-row {
+.hero-points{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:12px;
-  margin:26px 0 20px;
+  margin:24px 0 0;
 }
-.benefit-card {
-  background:rgba(255,255,255,.8);
+.point{
+  background:#fff;
   border:1px solid var(--line);
   border-radius:20px;
   padding:16px 14px;
-  min-height:92px;
-  display:flex;
-  align-items:center;
-  font-size:16px;
+  min-height:96px;
 }
-.cta {
+.point strong{
+  display:block;
+  font-size:13px;
+  color:#8d786d;
+  margin-bottom:6px;
+  letter-spacing:.08em;
+}
+.point span{
+  display:block;
+  font-size:16px;
+  line-height:1.5;
+}
+.cta-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin-top:22px;
+}
+.cta{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  min-height:60px;
-  padding:0 22px;
+  min-height:58px;
+  padding:0 18px;
   border-radius:999px;
-  background:#1f1f22;
+  font-weight:800;
+  font-size:16px;
+  letter-spacing:.02em;
+  background:linear-gradient(135deg,var(--accent) 0%,var(--accent2) 100%);
   color:#fff;
-  text-decoration:none;
-  font-size:16px;
-  font-weight:800;
-  letter-spacing:.01em;
-  margin-top:4px;
+  box-shadow:0 12px 24px rgba(31,31,34,.18);
 }
-.subline {
-  margin-top:14px;
-  color:#7f726c;
-  font-size:16px;
-}
-.hero-visual {
-  min-height:300px;
-  border-radius:34px;
-  border:1px solid var(--line);
-  background-size:cover;
-  background-position:center;
-  position:relative;
-  overflow:hidden;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-.hero-product {
-  width:80%;
-  max-width:520px;
-  object-fit:contain;
-  filter:drop-shadow(0 20px 30px rgba(0,0,0,.12));
-}
-.placeholder {
-  flex-direction:column;
-  color:#997f74;
-  text-align:center;
-}
-.placeholder-over {
-  font-size:16px;
-  letter-spacing:.14em;
-  margin-bottom:18px;
-}
-.placeholder-name {
-  font-size:62px;
-  font-weight:800;
-  line-height:1.08;
-}
-.section {
-  padding:34px 0;
-}
-.section-grid {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:12px;
-}
-.card {
-  background:var(--paper);
-  border:1px solid var(--line);
-  border-radius:22px;
-  padding:22px 18px;
-}
-.card h2 {
-  margin:0 0 16px;
-  font-size:clamp(24px,6vw,36px);
-  line-height:1.12;
-  letter-spacing:-0.03em;
-}
-.card p, .card li {
-  font-size:16px;
-}
-.card ul {
-  margin:16px 0 0;
-  padding-left:1.2em;
-}
-.gallery-wrap {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:12px;
-  margin-top:14px;
-}
-.gallery-item {
-  min-height:180px;
-  border-radius:20px;
-  border:1px solid var(--line);
-  background-size:cover;
-  background-position:center;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  overflow:hidden;
-}
-.gallery-product {
-  width:74%;
-  object-fit:contain;
-  filter:drop-shadow(0 14px 24px rgba(0,0,0,.10));
-}
-.placeholder-small {
-  color:#9b7f75;
-  font-size:28px;
-  font-weight:700;
-}
-.summary-grid {
-  display:grid;
-  grid-template-columns:.92fr 1.08fr;
-  gap:12px;
-  align-items:center;
-}
-.summary-shot {
-  min-height:280px;
-  border-radius:22px;
-  border:1px solid var(--line);
-  background-size:cover;
-  background-position:center;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  overflow:hidden;
-  background:#f7f1eb;
-}
-.summary-shot img {
-  width:76%;
-  object-fit:contain;
-  filter:drop-shadow(0 16px 26px rgba(0,0,0,.12));
-}
-@media (max-width:900px) {
-    .wrap { padding:12px 12px 56px; }
-    .card { padding:18px 14px; }
-    .benefit-card { font-size:15px; }
-    .cta { width:100%; }
-    .gallery-product { width:68%; }
-    .hero-product { width:74%; }
-
-  .hero-grid,
-  .section-grid,
-  .summary-grid,
-  .benefit-row,
-  .gallery-wrap {
-    grid-template-columns:1fr;
-  }
-  .hero-visual { min-height:300px; }
-  .summary-shot { min-height:240px; }
-  h1 { font-size:clamp(40px,12vw,66px); }
-}
-
-.sales-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.sales-card{background:var(--paper);border:1px solid var(--line);border-radius:28px;padding:28px}
-.sales-card h3{margin:0 0 12px;font-size:26px;line-height:1.2}
-.full-card{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:34px}
-.full-card h2{margin:0 0 16px;font-size:clamp(28px,4vw,48px);line-height:1.15}
-.full-card p,.full-card li{font-size:18px}
-.full-card ul{margin:16px 0 0;padding-left:1.2em}
-.spec-table{display:grid;gap:0}
-.spec-row{display:grid;grid-template-columns:220px 1fr;gap:12px;padding:16px 0;border-bottom:1px solid var(--line)}
-.spec-key{font-weight:800}
-.spec-val{color:var(--sub)}
-.cta-stack{display:flex;flex-direction:column;gap:14px;align-items:flex-start}
-.note-soft{color:var(--sub);font-size:16px}
-.big-gallery{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.big-shot{min-height:240px;border:1px solid var(--line);border-radius:26px;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.big-shot img{width:76%;object-fit:contain;filter:drop-shadow(0 16px 26px rgba(0,0,0,.12))}
-@media (max-width:900px){
-  .sales-grid,.big-gallery{grid-template-columns:1fr}
-  .spec-row{grid-template-columns:1fr}
-}
-
-
-.compare-table{display:grid;gap:0;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:#fff}
-.compare-row{display:grid;grid-template-columns:220px 1fr 1fr;gap:0}
-.compare-row > div{padding:16px 18px;border-bottom:1px solid var(--line)}
-.compare-head{background:#f2e7dc;font-weight:800}
-.compare-key{background:#faf6f1;font-weight:700}
-.barrier-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.barrier-card{background:#fff;border:1px solid var(--line);border-radius:26px;padding:26px}
-.barrier-card h3{margin:0 0 12px;font-size:24px;line-height:1.2}
-.cta-strong{display:inline-flex;align-items:center;justify-content:center;min-height:72px;padding:0 34px;border-radius:999px;background:#1f1f22;color:#fff;text-decoration:none;font-size:21px;font-weight:800;letter-spacing:.01em}
-.cta-subnote{margin-top:14px;color:var(--sub);font-size:16px}
-.role-gallery{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.role-shot{min-height:180px;border:1px solid var(--line);border-radius:20px;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.role-shot img{width:76%;object-fit:contain;filter:drop-shadow(0 16px 26px rgba(0,0,0,.12))}
-.role-label{padding:10px 14px 0;color:#8d756a;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
-@media (max-width:900px){
-  .compare-row{grid-template-columns:1fr}
-  .barrier-grid,.role-gallery{grid-template-columns:1fr}
-}
-
-
-.visual-grid-4{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.visual-card{border:1px solid var(--line);border-radius:26px;overflow:hidden;background:#fff}
-.visual-card img{width:100%;height:280px;object-fit:cover;display:block}
-.visual-card .cap{padding:16px 18px}
-.visual-card .cap h3{margin:0 0 8px;font-size:24px;line-height:1.2}
-.visual-card .cap p{margin:0;color:var(--sub);font-size:16px}
-.point-grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px}
-.point-card{background:#fff;border:1px solid var(--line);border-radius:26px;padding:26px}
-.point-card h3{margin:0 0 12px;font-size:24px;line-height:1.2}
-.point-card p{margin:0;color:var(--sub)}
-.flow-steps{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px}
-.flow-step{background:#fff;border:1px solid var(--line);border-radius:26px;padding:24px}
-.flow-no{font-size:14px;letter-spacing:.12em;color:#8c7267;margin-bottom:10px}
-.flow-step h3{margin:0 0 10px;font-size:24px}
-.cta-final-strong{padding:34px;border-radius:28px;background:#1f1f22;color:#fff}
-.cta-final-strong h2{margin:0 0 12px;color:#fff}
-.cta-final-strong p{color:rgba(255,255,255,.82)}
-.cta-final-strong .cta{background:#fff;color:#1f1f22}
-@media (max-width:900px){
-  .visual-grid-4,.point-grid-3,.flow-steps{grid-template-columns:1fr}
-}
-
-
-.sales-grid-4{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.sales-card{background:#fff;border:1px solid var(--line);border-radius:26px;overflow:hidden}
-.sales-card img{width:100%;height:260px;object-fit:cover;display:block}
-.sales-card .txt{padding:18px}
-.sales-card .txt h3{margin:0 0 10px;font-size:24px;line-height:1.2}
-.sales-card .txt p{margin:0;color:var(--sub);font-size:16px}
-.evidence-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px}
-.evidence-card{background:#fff;border:1px solid var(--line);border-radius:26px;padding:24px}
-.evidence-card h3{margin:0 0 12px;font-size:22px;line-height:1.2}
-.evidence-card p{margin:0;color:var(--sub)}
-.cta-strong{background:#1f1f22;color:#fff;border-radius:22px;padding:34px}
-.cta-strong h2{margin:0 0 12px;color:#fff}
-.cta-strong p{color:rgba(255,255,255,.82)}
-.cta-strong .cta{background:#fff;color:#1f1f22}
-@media (max-width:900px){
-  .sales-grid-4,.evidence-grid{grid-template-columns:1fr}
-}
-
-
-.visual-4{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
-.visual-card{background:#fff;border:1px solid var(--line);border-radius:26px;overflow:hidden}
-.visual-card img{width:100%;height:240px;object-fit:cover;display:block}
-.visual-card .cap{padding:16px 18px}
-.visual-card .cap h3{margin:0 0 8px;font-size:22px;line-height:1.2}
-.visual-card .cap p{margin:0;color:var(--sub);font-size:15px}
-.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.compare-box{background:#fff;border:1px solid var(--line);border-radius:26px;padding:24px}
-.compare-box h3{margin:0 0 12px;font-size:24px}
-.compare-box p{margin:0;color:var(--sub)}
-@media (max-width:900px){
-  .visual-4,.compare-grid{grid-template-columns:1fr}
-}
-
-
-.fake-card{
-  min-height:180px;
-  border:1px solid #eadfd6;
-  border-radius:28px;
-  background:linear-gradient(180deg,#fffdfa 0%,#f6eee8 100%);
-  padding:28px 24px;
-  display:flex;
-  flex-direction:column;
-  justify-content:flex-end;
-}
-.fake-kicker{
-  font-size:12px;
-  letter-spacing:.16em;
-  color:#9a7f73;
-  margin-bottom:14px;
-}
-.fake-title{
-  font-size:32px;
-  line-height:1.2;
-  font-weight:800;
-  color:#2f2723;
-  margin-bottom:10px;
-}
-.fake-text{
-  font-size:16px;
-  line-height:1.8;
-  color:#6d625c;
-}
-
-
-.hero-visual,
-.gallery-item,
-.summary-shot{
-  background-image:none !important;
+.cta.sub{
+  background:#fff;
+  color:var(--ink);
+  border:1px solid #d7c8bc;
+  box-shadow:none;
 }
 .hero-visual{
-  background:#f6efe9 !important;
+  background:linear-gradient(180deg,#f4ebe3 0%,#fbf8f4 100%);
+  border:1px solid var(--line);
+  border-radius:34px;
+  padding:24px;
+  min-height:520px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
-.gallery-item{
-  background:#fbf8f4 !important;
+.hero-visual img{
+  width:100%;
+  max-width:460px;
+  object-fit:contain;
+  filter:drop-shadow(0 20px 30px rgba(0,0,0,.10));
 }
-.summary-shot{
-  background:#f3ebe4 !important;
+.note{
+  margin-top:14px;
+  font-size:13px;
+  color:#8d8178;
 }
-
+.grid-2{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+.grid-3{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+.grid-4{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+}
+.visual-card{
+  overflow:hidden;
+  border-radius:24px;
+  background:#fff;
+  border:1px solid var(--line);
+}
+.visual-card img{
+  width:100%;
+  height:240px;
+  object-fit:contain;
+  background:linear-gradient(180deg,#f6eee7 0%,#fff 100%);
+  padding:18px;
+}
+.visual-card .copy{
+  padding:14px 16px 18px;
+  font-size:14px;
+  color:var(--sub);
+}
+.list{
+  margin:14px 0 0;
+  padding-left:1.2em;
+}
+.list li{margin:6px 0}
+.sales-card{
+  display:grid;
+  grid-template-columns:.95fr 1.05fr;
+  gap:20px;
+  align-items:center;
+}
+.sales-card img{
+  width:100%;
+  height:300px;
+  object-fit:contain;
+  background:linear-gradient(180deg,#f6eee7 0%,#fff 100%);
+  border-radius:24px;
+  border:1px solid var(--line);
+  padding:20px;
+}
+.sales-block{
+  display:grid;
+  gap:18px;
+}
+.mini-head{
+  font-size:13px;
+  letter-spacing:.12em;
+  color:#8d786d;
+  margin-bottom:6px;
+}
+.faq{
+  display:grid;
+  gap:12px;
+}
+.faq-item{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:18px 18px 16px;
+}
+.faq-q{
+  font-weight:800;
+  margin-bottom:8px;
+  font-size:16px;
+}
+.faq-a{
+  color:var(--sub);
+  font-size:14px;
+}
+.spec{
+  display:grid;
+  gap:0;
+}
+.spec-row{
+  display:grid;
+  grid-template-columns:180px 1fr;
+  gap:16px;
+  padding:14px 0;
+  border-bottom:1px solid var(--line);
+}
+.spec-row:last-child{border-bottom:none}
+.spec-key{
+  font-weight:800;
+  font-size:14px;
+}
+.spec-val{
+  color:var(--sub);
+  font-size:14px;
+}
+.big-cta{
+  text-align:center;
+  padding:30px 22px;
+}
+.big-cta p{
+  margin:0 auto 20px;
+  max-width:760px;
+  color:var(--sub);
+}
+.full{width:100%}
+.sticky-buy{
+  position:fixed;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index:20;
+  background:rgba(246,241,235,.92);
+  backdrop-filter:blur(10px);
+  border-top:1px solid rgba(180,160,145,.35);
+  padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+}
+.sticky-buy .inner{
+  width:min(100%,1120px);
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+.price-box{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  margin-top:18px;
+  flex-wrap:wrap;
+}
+.price{
+  font-size:28px;
+  font-weight:800;
+  letter-spacing:-.02em;
+}
+.badge{
+  display:inline-flex;
+  align-items:center;
+  min-height:32px;
+  padding:0 12px;
+  border-radius:999px;
+  background:#fff;
+  border:1px solid var(--line);
+  color:#7d6d62;
+  font-size:13px;
+}
+@media (max-width:920px){
+  .hero-grid,
+  .grid-2,
+  .grid-3,
+  .grid-4,
+  .sales-card{
+    grid-template-columns:1fr;
+  }
+  .hero-points{
+    grid-template-columns:1fr;
+  }
+  .hero-visual{
+    min-height:auto;
+  }
+  .sales-card img{
+    height:260px;
+  }
+  .visual-card img{
+    height:220px;
+  }
+  .spec-row{
+    grid-template-columns:1fr;
+    gap:6px;
+  }
+}
 </style>
 </head>
 <body>
-  <div class="wrap">
-    <section class="hero">
-      <div class="hero-grid">
-        <div>
-          <div class="eyebrow">BB BASE MAKE / EDUCATE B</div>
-          <h1>厚 塗 り し た く な い 。<br>で も 、 肌 印 象 は 整 え た い 。</h1>
-          <p class="lead">軽 く 仕 上 げ た い 日 も 、 乾 燥 感 を 避 け た い 日 も 。 毎 日 使 い し や す い BB 下 地 と し て 、 自 然 に 整 っ た 印 象 へ 導 く 提 案 で す 。</p>
-          <div class="benefit-row">
-<div class="benefit-card">厚 塗 り 感 を 抑 え な が ら 、 き ち ん と 整 っ た 印 象 へ</div>
-<div class="benefit-card">忙 し い 朝 で も 取 り 入 れ や す い 、 軽 や か な ベ ー ス メ イ ク</div>
-<div class="benefit-card">乾 燥 感 を 避 け た い 日 も 、 心 地 よ さ を 意 識 し て 使 い や す い</div>
-</div><div class="benefit-card">乾燥感を避けながら心地よく使える</div><div class="benefit-card">ベースメイク時間を上質なケア発想へ</div></div>
-          <a class="cta" href="https://kuu-medic.com/products/educate-b" target="_blank" rel="noopener noreferrer">自分の肌印象を整える一歩を始める</a>
-          <div class="subline">隠すためではなく、整えて魅せるためのベースメイク発想。</div>
-            <div style="height:10px"></div>
-            <div style="font-size:13px;color:#8c8078;">軽 く 仕 上 げ た い 日 も 、 乾 燥 感 を 避 け た い 日 も 。</div>
-        </div>
-        <div>
-<div class="hero-visual" style="background:#f7f1eb">
-  <img class="hero-product" src="https://kuu-medic.com/cdn/shop/files/fit_cover_w_920_h_920.avif?v=1758074455" alt="educate B">
-</div></div>
-      </div>
-    </section>
+<div class="wrap">
 
-    <section class="section">
-      <div class="section-grid">
-        <div class="card">
-          <h2>こんな方へ</h2>
-          <p>ベースメイクを重たくしたくない方へ。自然な印象を保ちながら、肌をきれいに見せたい日に取り入れやすい設計です。</p>
-          <ul>
-<li>フ ァ ン デ を 重 た く し た く な い</li>
-<li>す っ ぴ ん す ぎ る 印 象 は 避 け た い</li>
-<li>忙 し い 朝 で も 、 肌 を 雑 に 見 せ た く な い</li>
-<li>乾 燥 感 が 気 に な る 日 も ベ ー ス を 整 え た い</li>
-</ul>
+  <section class="hero">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow">AMYU / BB CREAM BASE</div>
+        <h1 class="h1">厚塗りしたくない。<br>でも、肌印象は整えたい。</h1>
+        <p class="lead">
+          軽やかにのばしやすく、自然なツヤと均一なトーンを意識した
+          <strong>educate B</strong>。
+          ベースメイクを重たく見せたくない日に取り入れやすい化粧下地です。
+        </p>
+
+        <div class="price-box">
+          <div class="price">¥10,890<span style="font-size:14px;font-weight:700;margin-left:6px">税込</span></div>
+          <div class="badge">内容量 30ml</div>
+          <div class="badge">BBクリーム / 化粧下地</div>
         </div>
-        <div class="card">
-          <h2>educate B の価値</h2>
-          <p>目指したのは、隠しすぎずに整った印象。自然なツヤ、均一なトーン、しっとり感を意識しながら、毎日のメイクを軽やかに支えます。</p>
+
+        <div class="hero-points">
+          <div class="point">
+            <strong>POINT 01</strong>
+            <span>軽いテクスチャーで、重たさを出しすぎにくい</span>
+          </div>
+          <div class="point">
+            <strong>POINT 02</strong>
+            <span>自然なツヤ感と均一なトーンを意識した見せ方</span>
+          </div>
+          <div class="point">
+            <strong>POINT 03</strong>
+            <span>保湿成分を含み、しっとり感を保ちたい日に使いやすい</span>
+          </div>
+        </div>
+
+        <div class="cta-row">
+          <a class="cta" href="https://kuu-medic.jp/products/brand-amyu/educate/" target="_blank" rel="noopener noreferrer">今すぐ商品詳細を確認する</a>
+          <a class="cta sub" href="https://kuushop.stores.jp/items/674aa46e72c3a43883565003" target="_blank" rel="noopener noreferrer">購入ページを見る</a>
+        </div>
+
+        <div class="note">
+          公式ページと購入ページの両方を見比べながら選びたい方向けの構成です。
         </div>
       </div>
-    </section>
 
-    <section class="section">
-      <div class="section-grid">
-        <div class="card">
-          <h2>成分発想</h2>
-          <p>セラミド系成分や植物由来オイルを含む処方発想で、仕上がりだけでなく使い心地にも目を向けたベースメイクです。</p>
+      <div class="hero-visual">
+        <img src="https://kuu-medic.com/cdn/shop/files/fit_cover_w_920_h_920.avif?v=1758074455&width=1200" alt="educate B 商品画像">
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="grid-2">
+      <div class="card">
+        <div class="eyebrow">FOR YOU</div>
+        <h2 class="h2">こんな方へ</h2>
+        <ul class="list">
+          <li>ファンデーションを厚く重ねた印象にしたくない</li>
+          <li>ベースメイクで肌印象は整えたい</li>
+          <li>乾燥感を避けながら使いやすい下地を探したい</li>
+          <li>忙しい朝でも手に取りやすい1本を持っておきたい</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="eyebrow">WHY EDUCATE B</div>
+        <h2 class="h2">今、選びやすい理由</h2>
+        <p>
+          educate B は、隠すことを強く打ち出すよりも、
+          <strong>整って見えること</strong>と<strong>使い心地</strong>の両立を狙いやすい設計です。
+          きっちり作り込みすぎた印象は避けたいけれど、何もしていないようには見せたくない。
+          そんな日のベースメイクに組み込みやすい立ち位置があります。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="card">
+      <div class="eyebrow">PRODUCT VISUAL</div>
+      <h2 class="h2">ファーストビュー以外でも、商品をしっかり見せる</h2>
+      <div class="grid-4">
+        <div class="visual-card">
+          <img src="https://kuu-medic.com/cdn/shop/files/fit_cover_w_920_h_920.avif?v=1758074455&width=1200" alt="educate B 商品画像 1">
+          <div class="copy">主役として見せる正面カット</div>
         </div>
-        <div class="card">
-          <h2>使用イメージ</h2>
-          <p>忙しい朝でも手に取りやすく、肌印象を整えたい日に自然になじむ。毎日のメイク時間を、少し心地よいものへ寄せていきます。</p>
-          <div class="gallery-wrap">
-            
-<div class="gallery-item" style="background:#f7f1eb">
-  <img class="gallery-product" src="https://kuu-medic.com/cdn/shop/files/fit_cover_w_920_h_920.avif?v=1758074455&width=1200" alt="educate B">
-</div>
-            
-<div class="gallery-item" style="background:#f7f1eb">
-  <img class="gallery-product" src="https://kuu-medic.com/cdn/shop/files/fit_cover_w_920_h_920.avif?v=1758074455&width=1000" alt="educate B">
-</div>
-            
-<div class="gallery-item" style="background:#f7f1eb">
-  <img class="gallery-product" src="https://kuu-medic.com/cdn/shop/files/fit_cover_w_920_h_920.avif?v=1758074455&width=900" alt="educate B">
-</div>
-            
-<div class="gallery-item" style="background:#f7f1eb">
-  <img class="gallery-product" src="https://kuu-medic.com/cdn/shop/files/fit_cover_w_920_h_920.avif?v=1758074455" alt="educate B">
-</div>
+        <div class="visual-card">
+          <img src="https://kuu-medic.com/cdn/shop/files/fit_cover_w_920_h_920.avif?v=1758074455&width=1000" alt="educate B 商品画像 2">
+          <div class="copy">成分訴求やベネフィット横に置きやすいサイズ</div>
+        </div>
+        <div class="visual-card">
+          <img src="https://kuu-medic.com/cdn/shop/files/fit_cover_w_920_h_920.avif?v=1758074455&width=900" alt="educate B 商品画像 3">
+          <div class="copy">朝の時短イメージにもなじませやすい見せ方</div>
+        </div>
+        <div class="visual-card">
+          <img src="https://kuu-medic.com/cdn/shop/files/fit_cover_w_920_h_920.avif?v=1758074455" alt="educate B 商品画像 4">
+          <div class="copy">CTA付近でも商品名を忘れさせない配置</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="sales-block">
+      <div class="card sales-card">
+        <img src="https://kuu-medic.com/cdn/shop/files/fit_cover_w_920_h_920.avif?v=1758074455&width=1200" alt="educate B 軽いテクスチャー">
+        <div>
+          <div class="mini-head">BENEFIT 01</div>
+          <h2 class="h2">軽く仕上げたい日に向きやすい</h2>
+          <p>
+            公式商品説明では「軽いテクスチャーで肌に溶け込み」と案内されています。
+            ベースをしっかり作り込みすぎず、でも印象は整えたい日に選びやすいのが強みです。
+          </p>
+        </div>
+      </div>
+
+      <div class="card sales-card">
+        <img src="https://kuu-medic.com/cdn/shop/files/fit_cover_w_920_h_920.avif?v=1758074455&width=1000" alt="educate B 自然なツヤ">
+        <div>
+          <div class="mini-head">BENEFIT 02</div>
+          <h2 class="h2">自然なツヤと均一感を意識しやすい</h2>
+          <p>
+            商品説明では「自然なツヤ」と「均一なトーン」が打ち出されています。
+            すっぴん風に寄せすぎず、きちんと感だけを足したい時に使い分けやすい方向性です。
+          </p>
+        </div>
+      </div>
+
+      <div class="card sales-card">
+        <img src="https://kuu-medic.com/cdn/shop/files/fit_cover_w_920_h_920.avif?v=1758074455&width=900" alt="educate B しっとり感">
+        <div>
+          <div class="mini-head">BENEFIT 03</div>
+          <h2 class="h2">乾燥感を避けたい日にも取り入れやすい</h2>
+          <p>
+            公式ページでは保湿成分高配合でしっとり感が持続すると案内されています。
+            パサついた見え方を避けたい日や、肌をやわらかく見せたい日に合わせやすい設計です。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="grid-2">
+      <div class="card">
+        <div class="eyebrow">3 POINTS</div>
+        <h2 class="h2">成分発想を、使用感につなげて見る</h2>
+        <div class="faq">
+          <div class="faq-item">
+            <div class="faq-q">ザクロ種子油</div>
+            <div class="faq-a">乾燥した肌にうるおいを与える方向で紹介されており、しっとり感を重視したい日に見やすい成分です。</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">EGF（上皮成長因子）</div>
+            <div class="faq-a">肌リズムを整え、ハリやツヤを与える方向で紹介されています。印象をなめらかに見せたい時の訴求に使いやすいです。</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">ビタミンE（酢酸トコフェロール）</div>
+            <div class="faq-a">紫外線や環境ストレスから肌を守る手助けをする方向で案内されており、日中メイクの安心感につなげやすい要素です。</div>
           </div>
         </div>
       </div>
-    </section>
 
-    <section class="section">
-      <div class="summary-grid">
-        <div class="summary-shot">
-          <img src="https://kuu-medic.com/cdn/shop/files/fit_cover_w_920_h_920.avif?v=1758074455&width=1200" alt="educate B">
-        </div>
-        <div class="card">
-          <h2>商品要約</h2>
-          <p>重さを出しすぎず、乾燥感を避けながら、肌印象を整えたい方へ。educate B は、仕上がりと心地よさの両立を目指したBB下地です。</p>
-          <div style="height:22px"></div>
-          <a class="cta" href="https://kuu-medic.com/products/educate-b" target="_blank" rel="noopener noreferrer">自分の肌印象を整える一歩を始める</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
       <div class="card">
-        <h2>クロージング</h2>
-        <p>まずは商品詳細を確認して、自分の肌印象に合う使い方を見つけてください。</p>
+        <div class="eyebrow">USAGE SCENE</div>
+        <h2 class="h2">使いやすいシーン</h2>
+        <div class="faq">
+          <div class="faq-item">
+            <div class="faq-q">朝の時短メイク</div>
+            <div class="faq-a">1プッシュをなじませる使い方なので、朝の導線に組み込みやすいです。</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">軽く仕上げたい日</div>
+            <div class="faq-a">ファンデを重ねすぎたくない日に、ベースの印象を整える用途で使いやすいです。</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">乾燥感が気になる日</div>
+            <div class="faq-a">しっとり感の訴求があるため、粉っぽく見せたくない日に相性を考えやすいです。</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">きちんと感だけ欲しい日</div>
+            <div class="faq-a">作り込みすぎず、肌印象だけ整えたい日の選択肢にしやすいです。</div>
+          </div>
+        </div>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
 
-<section class="section">
-  <div class="section-grid">
+  <section class="section">
     <div class="card">
-      <h2>3つのベネフィットを詳しく</h2>
-      <p>educate B は、隠すことを目的にするのではなく、肌印象を自然に整えて見せることを大切にしたベースメイク発想です。</p>
-      <ul>
-        <li>自然なツヤ : 重たく見せすぎず、やわらかな印象へ</li>
-        <li>均一なトーン : ベース全体を整えて、きれいに見せる方向へ</li>
-        <li>しっとり感 : 毎日使いやすい使用感を意識した設計</li>
-      </ul>
+      <div class="eyebrow">FAQ</div>
+      <h2 class="h2">よくある質問</h2>
+      <div class="grid-2">
+        <div class="faq">
+          <div class="faq-item">
+            <div class="faq-q">厚塗り感は出にくい？</div>
+            <div class="faq-a">公式説明では軽いテクスチャーと案内されています。重たさを抑えたい方向の訴求です。</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">どんな日のベースメイクに向く？</div>
+            <div class="faq-a">自然なツヤ、均一なトーン、しっとり感を意識したい日です。</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">使用量の目安は？</div>
+            <div class="faq-a">公式案内では適量として1プッシュが目安です。</div>
+          </div>
+        </div>
+        <div class="faq">
+          <div class="faq-item">
+            <div class="faq-q">スキンケア後すぐ使える？</div>
+            <div class="faq-a">通常はスキンケア後にベースメイクへ進む流れで使いやすいです。肌表面が落ち着いてからなじませると扱いやすいです。</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">乾燥が気になる時でも使いやすい？</div>
+            <div class="faq-a">しっとり感の訴求があるため、乾燥感を避けたい日に候補にしやすいです。</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">購入前にどこを見ればいい？</div>
+            <div class="faq-a">まずは公式商品ページで特徴を確認し、その後に購入ページで価格と在庫導線を見るのがわかりやすいです。</div>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
+
+  <section class="section">
     <div class="card">
-      <h2>販売LPとしての見せ方</h2>
-      <p>紹介だけで終わらせず、誰に向いていて、どんな日によく合い、どう選ぶとよいかまで縦に理解できる構成へ整理しています。</p>
-      <div style="height:18px"></div>
-      <img class="gallery-product" src="https://kuu-medic.com/cdn/shop/files/fit_cover_w_920_h_920.avif?v=1758074455&width=1000" alt="educate B">
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="card">
-    <h2>使用シーン</h2>
-    <ul>
-      <li>朝の時短メイクで、手早く肌印象を整えたい日</li>
-      <li>軽く仕上げたいけれど、きちんと感も欲しい日</li>
-      <li>乾燥感が気になりやすい日のベースメイク</li>
-      <li>厚塗り感は避けたいけれど、整った印象に見せたい日</li>
-    </ul>
-  </div>
-</section>
-
-<section class="section">
-  <div class="card">
-    <h2>よくある質問</h2>
-    <ul>
-      <li>厚塗り感は出やすい？ → 重たく隠すより、整えて見せる方向のLP設計です。</li>
-      <li>どんな日に向いている？ → 朝の時短メイク、軽く仕上げたい日、乾燥感が気になる日に向いています。</li>
-      <li>自然に見せたい人にも合う？ → ナチュラルに整った印象を目指す方向に合います。</li>
-      <li>毎日使いやすい？ → 毎日手に取りやすい使用感を意識した訴求に寄せています。</li>
-      <li>仕上がり重視？成分重視？ → 両方をつなげて見せる構成にしています。</li>
-    </ul>
-  </div>
-</section>
-
-<section class="section">
-  <div class="section-grid">
-    <div class="card">
-      <h2>商品スペック</h2>
-      <ul>
-        <li>商品名 : educate B</li>
-        <li>カテゴリ : BBクリーム / 化粧下地</li>
-        <li>訴求軸 : 自然なツヤ / 均一なトーン / しっとり感</li>
-        <li>おすすめ像 : 厚塗り感は避けたいが、肌印象は整えたい方</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h2>背中押し</h2>
-      <p>ベースメイクを重たくしたくない。けれど、何もしていないようには見せたくない。そんな気分の日に、選択肢として置きやすい1本です。</p>
-      <div style="height:18px"></div>
-      <a class="cta" href="https://kuu-medic.jp/" target="_blank" rel="noopener noreferrer">educate B の魅力を確認する</a>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="card">
-    <h2>商品ビジュアル追加</h2>
-    <div class="gallery-wrap">
-      <div class="gallery-item"><img class="gallery-product" src="https://kuu-medic.com/cdn/shop/files/fit_cover_w_920_h_920.avif?v=1758074455&width=900" alt="educate B"></div>
-      <div class="gallery-item"><div class="fake-card">
-  <div class="fake-kicker">SALES MESSAGE</div>
-  <div class="fake-title">sales message</div>
-  <div class="fake-text">商品画像に頼りすぎず、使う理由と仕上がりの価値を伝えるための補足セクションです。重たさを出しすぎず、整った印象へ導くベースメイク発想を言葉で補強します。</div>
-</div></div>
-      <div class="gallery-item"><div class="fake-card">
-  <div class="fake-kicker">SALES MESSAGE</div>
-  <div class="fake-title">sales message</div>
-  <div class="fake-text">商品画像に頼りすぎず、使う理由と仕上がりの価値を伝えるための補足セクションです。重たさを出しすぎず、整った印象へ導くベースメイク発想を言葉で補強します。</div>
-</div></div>
-      <div class="gallery-item"><div class="fake-card">
-  <div class="fake-kicker">SALES MESSAGE</div>
-  <div class="fake-title">sales message</div>
-  <div class="fake-text">商品画像に頼りすぎず、使う理由と仕上がりの価値を伝えるための補足セクションです。重たさを出しすぎず、整った印象へ導くベースメイク発想を言葉で補強します。</div>
-</div></div>
-      <div class="gallery-item"><div class="fake-card">
-  <div class="fake-kicker">SALES MESSAGE</div>
-  <div class="fake-title">sales message</div>
-  <div class="fake-text">商品画像に頼りすぎず、使う理由と仕上がりの価値を伝えるための補足セクションです。重たさを出しすぎず、整った印象へ導くベースメイク発想を言葉で補強します。</div>
-</div></div>
-      <div class="gallery-item"><div class="fake-card">
-  <div class="fake-kicker">SALES MESSAGE</div>
-  <div class="fake-title">sales message</div>
-  <div class="fake-text">商品画像に頼りすぎず、使う理由と仕上がりの価値を伝えるための補足セクションです。重たさを出しすぎず、整った印象へ導くベースメイク発想を言葉で補強します。</div>
-</div></div>
-    </div>
-  </div>
-</section>
-
-
-<section class="section">
-  <div class="full-card">
-    <h2>こんな方に選びやすい設計です</h2>
-    <ul>
-      <li>厚塗り感は避けたいが、肌印象は整えて見せたい</li>
-      <li>朝のベースメイクを重たくしたくない</li>
-      <li>自然なツヤ感を意識した仕上がりが好き</li>
-      <li>乾燥感が気になる日でも使いやすさを重視したい</li>
-      <li>きちんと感と軽さを両立したい</li>
-    </ul>
-  </div>
-</section>
-
-<section class="section">
-  <div class="sales-grid">
-    <div class="sales-card">
-      <h3>自然なツヤ</h3>
-      <p>隠しすぎる方向ではなく、やわらかく整って見える印象へ。ベースメイクを重く見せたくない日に取り入れやすい見せ方です。</p>
-    </div>
-    <div class="sales-card">
-      <h3>均一なトーン</h3>
-      <p>肌全体の印象をなめらかに整えて、きれいに見せたい日に。日常使いしやすい方向で価値を伝える販売LP構成にしています。</p>
-    </div>
-    <div class="sales-card">
-      <h3>しっとり感</h3>
-      <p>使用感の心地よさも意識しながら、毎日のベースメイクに取り入れやすい1本として見せています。</p>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="section-grid">
-    <div class="full-card">
-      <h2>成分発想と使用感のつながり</h2>
-      <p>LPでは成分名の羅列ではなく、なぜその処方発想が「重たく見せすぎない」「自然な印象に整える」「毎日使いやすい」という使用感訴求につながるのかを重視して整理しています。</p>
-      <ul>
-        <li>セラミド系成分 : しっとり感を意識した見せ方</li>
-        <li>植物由来オイル : やわらかな使用感イメージの補強</li>
-        <li>美容発想成分 : ベースメイク時間をケア発想へ寄せる訴求</li>
-      </ul>
-    </div>
-    <div class="full-card">
-      <h2>商品ビジュアル</h2>
-      <div class="big-gallery">
-        <div class="big-shot"><div class="fake-card">
-  <div class="fake-kicker">SALES MESSAGE</div>
-  <div class="fake-title">sales message</div>
-  <div class="fake-text">商品画像に頼りすぎず、使う理由と仕上がりの価値を伝えるための補足セクションです。重たさを出しすぎず、整った印象へ導くベースメイク発想を言葉で補強します。</div>
-</div></div>
-        <div class="big-shot"><div class="fake-card">
-  <div class="fake-kicker">SALES MESSAGE</div>
-  <div class="fake-title">sales message</div>
-  <div class="fake-text">商品画像に頼りすぎず、使う理由と仕上がりの価値を伝えるための補足セクションです。重たさを出しすぎず、整った印象へ導くベースメイク発想を言葉で補強します。</div>
-</div></div>
-        <div class="big-shot"><div class="fake-card">
-  <div class="fake-kicker">SALES MESSAGE</div>
-  <div class="fake-title">sales message</div>
-  <div class="fake-text">商品画像に頼りすぎず、使う理由と仕上がりの価値を伝えるための補足セクションです。重たさを出しすぎず、整った印象へ導くベースメイク発想を言葉で補強します。</div>
-</div></div>
-        <div class="big-shot"><div class="fake-card">
-  <div class="fake-kicker">SALES MESSAGE</div>
-  <div class="fake-title">sales message</div>
-  <div class="fake-text">商品画像に頼りすぎず、使う理由と仕上がりの価値を伝えるための補足セクションです。重たさを出しすぎず、整った印象へ導くベースメイク発想を言葉で補強します。</div>
-</div></div>
-        <div class="big-shot"><div class="fake-card">
-  <div class="fake-kicker">SALES MESSAGE</div>
-  <div class="fake-title">sales message</div>
-  <div class="fake-text">商品画像に頼りすぎず、使う理由と仕上がりの価値を伝えるための補足セクションです。重たさを出しすぎず、整った印象へ導くベースメイク発想を言葉で補強します。</div>
-</div></div>
-        <div class="big-shot"><div class="fake-card">
-  <div class="fake-kicker">SALES MESSAGE</div>
-  <div class="fake-title">sales message</div>
-  <div class="fake-text">商品画像に頼りすぎず、使う理由と仕上がりの価値を伝えるための補足セクションです。重たさを出しすぎず、整った印象へ導くベースメイク発想を言葉で補強します。</div>
-</div></div>
+      <div class="eyebrow">SPEC</div>
+      <h2 class="h2">商品スペック</h2>
+      <div class="spec">
+        <div class="spec-row">
+          <div class="spec-key">商品名</div>
+          <div class="spec-val">educate B / エヂュケートｂ ＜化粧下地＞</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-key">カテゴリ</div>
+          <div class="spec-val">BBクリーム / 化粧下地</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-key">内容量</div>
+          <div class="spec-val">30ml</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-key">使用方法</div>
+          <div class="spec-val">適量（1プッシュ）を手に取り、顔全体になじませる</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-key">価格</div>
+          <div class="spec-val">STORES 表示価格 ¥10,890 税込</div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section">
-  <div class="sales-grid">
-    <div class="sales-card">
-      <h3>朝の時短メイク</h3>
-      <p>短い時間でも肌印象を整えたい朝に。</p>
+  <section class="section">
+    <div class="card big-cta">
+      <div class="eyebrow">FINAL MESSAGE</div>
+      <h2 class="h2">隠すためではなく、整えて魅せるために。</h2>
+      <p>
+        しっかり作り込みすぎず、でも手を抜いたようには見せたくない。
+        educate B は、そんな毎日のベースメイクに寄り添いやすい1本です。
+        まずは公式ページで特徴を確認して、購入ページで導線を見比べてください。
+      </p>
+      <div class="cta-row" style="max-width:760px;margin:0 auto">
+        <a class="cta" href="https://kuu-medic.jp/products/brand-amyu/educate/" target="_blank" rel="noopener noreferrer">今すぐ商品詳細を確認する</a>
+        <a class="cta sub" href="https://kuushop.stores.jp/items/674aa46e72c3a43883565003" target="_blank" rel="noopener noreferrer">購入ページを見る</a>
+      </div>
     </div>
-    <div class="sales-card">
-      <h3>軽く仕上げたい日</h3>
-      <p>重たさを出したくないけれど、きちんと感は欲しい日に。</p>
-    </div>
-    <div class="sales-card">
-      <h3>乾燥感が気になる日</h3>
-      <p>心地よさを意識しながらベースメイクを整えたい日に。</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section class="section">
-  <div class="full-card">
-    <h2>よくある質問</h2>
-    <ul>
-      <li>厚塗り感は出やすい？ → LP上は、隠すより整えて見せる方向で訴求しています。</li>
-      <li>どんな日に向いている？ → 朝の時短メイク、軽く仕上げたい日、乾燥感が気になる日に向きます。</li>
-      <li>毎日使いやすい？ → 毎日手に取りやすい使用感を意識した販売設計です。</li>
-      <li>自然な印象を目指したい人にも合う？ → ナチュラルに整った印象を目指す方向と相性が良いです。</li>
-      <li>成分重視の人にも向いている？ → 成分と使用感の関係を見ながら選びたい方に向いています。</li>
-      <li>どこを見て選べばいい？ → 仕上がり、軽さ、しっとり感の3点で見ると選びやすいです。</li>
-    </ul>
-  </div>
-</section>
-
-<section class="section">
-  <div class="full-card">
-    <h2>商品スペック</h2>
-    <div class="spec-table">
-      <div class="spec-row"><div class="spec-key">商品名</div><div class="spec-val">educate B</div></div>
-      <div class="spec-row"><div class="spec-key">カテゴリ</div><div class="spec-val">BBクリーム / 化粧下地</div></div>
-      <div class="spec-row"><div class="spec-key">訴求軸</div><div class="spec-val">自然なツヤ / 均一なトーン / しっとり感</div></div>
-      <div class="spec-row"><div class="spec-key">おすすめ像</div><div class="spec-val">厚塗り感は避けたいが、肌印象は整えたい方</div></div>
-      <div class="spec-row"><div class="spec-key">見せ方</div><div class="spec-val">商品写真主役・スマホ縦読み重視・販売LP構成</div></div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="full-card">
-    <h2>最後のひと押し</h2>
-    <p>ベースメイクを重たくしたくない。けれど、何もしていないようには見せたくない。そんな日に、選びやすい1本として見せています。</p>
-    <div style="height:18px"></div>
-    <div class="cta-stack">
-      <a class="cta" href="https://kuu-medic.jp/" target="_blank" rel="noopener noreferrer">まずは商品詳細を確認する</a>
-      <div class="note-soft">自然に整った印象へ。軽さと上質感のバランスを確認してください。</div>
-    </div>
-  </div>
-</section>
-
-
-
-<section class="section">
-  
-
-
-<div class="full-card">
-  <h2>見せ方を変えて、価値を伝える</h2>
-  <div class="visual-4">
-    <div class="visual-card">
-      <div class="fake-card">
-  <div class="fake-kicker">SALES MESSAGE</div>
-  <div class="fake-title">sales message</div>
-  <div class="fake-text">商品画像に頼りすぎず、使う理由と仕上がりの価値を伝えるための補足セクションです。重たさを出しすぎず、整った印象へ導くベースメイク発想を言葉で補強します。</div>
 </div>
-      <div class="cap">
-        <h3>商品を主役に見せる</h3>
-        <p>FVでは商品写真を大きく置き、最初の数秒で何の商品かを明確に伝えます。</p>
-      </div>
-    </div>
-    <div class="visual-card">
-      <div class="fake-card">
-  <div class="fake-kicker">SALES MESSAGE</div>
-  <div class="fake-title">sales message</div>
-  <div class="fake-text">商品画像に頼りすぎず、使う理由と仕上がりの価値を伝えるための補足セクションです。重たさを出しすぎず、整った印象へ導くベースメイク発想を言葉で補強します。</div>
-</div>
-      <div class="cap">
-        <h3>軽さと整った印象</h3>
-        <p>厚塗り感を避けたい人に向けて、仕上がり価値を短く強く伝えます。</p>
-      </div>
-    </div>
-    <div class="visual-card">
-      <div class="fake-card">
-  <div class="fake-kicker">SALES MESSAGE</div>
-  <div class="fake-title">sales message</div>
-  <div class="fake-text">商品画像に頼りすぎず、使う理由と仕上がりの価値を伝えるための補足セクションです。重たさを出しすぎず、整った印象へ導くベースメイク発想を言葉で補強します。</div>
-</div>
-      <div class="cap">
-        <h3>乾燥感を避けたい日へ</h3>
-        <p>しっとり感や使い心地の良さを、文章だけでなく視覚でも補強します。</p>
-      </div>
-    </div>
-    <div class="visual-card">
-      <div class="fake-card">
-  <div class="fake-kicker">SALES MESSAGE</div>
-  <div class="fake-title">sales message</div>
-  <div class="fake-text">商品画像に頼りすぎず、使う理由と仕上がりの価値を伝えるための補足セクションです。重たさを出しすぎず、整った印象へ導くベースメイク発想を言葉で補強します。</div>
-</div>
-      <div class="cap">
-        <h3>朝の時短メイクにも</h3>
-        <p>毎日使いやすいことを、スマホで流し見しても伝わる販売LPに寄せます。</p>
-      </div>
-    </div>
+
+<div class="sticky-buy">
+  <div class="inner">
+    <a class="cta" href="https://kuu-medic.jp/products/brand-amyu/educate/" target="_blank" rel="noopener noreferrer">商品詳細</a>
+    <a class="cta sub" href="https://kuushop.stores.jp/items/674aa46e72c3a43883565003" target="_blank" rel="noopener noreferrer">購入ページ</a>
   </div>
 </div>
-</section>
-
-
-
-
-
-<section class="section">
-  <div class="full-card">
-    <h2>educate B が選ばれやすい理由</h2>
-    <div class="compare-table">
-      <div class="compare-row compare-head">
-        <div>比較軸</div>
-        <div>educate B</div>
-        <div>よくある重ためベースの悩み</div>
-      </div>
-      <div class="compare-row">
-        <div class="compare-key">仕上がり印象</div>
-        <div>自然なツヤと整った印象を目指しやすい</div>
-        <div>きちんと感は出ても重たく見えやすいことがある</div>
-      </div>
-      <div class="compare-row">
-        <div class="compare-key">使いやすさ</div>
-        <div>毎日のベースメイクに取り入れやすい方向で設計</div>
-        <div>日によっては重く感じやすい</div>
-      </div>
-      <div class="compare-row">
-        <div class="compare-key">見せ方</div>
-        <div>隠すより整えて魅せる方向</div>
-        <div>カバー重視で厚塗り感が出やすい場合がある</div>
-      </div>
-      <div class="compare-row">
-        <div class="compare-key">相性がいい日</div>
-        <div>時短で整えたい日、軽く仕上げたい日</div>
-        <div>しっかり作り込みたい日</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="barrier-grid">
-    <div class="barrier-card">
-      <h3>購入前の不安 01</h3>
-      <p>厚塗り感が出ないか気になる方へ。LPでは、隠すためではなく、整って見える印象づくりを重視した見せ方に寄せています。</p>
-    </div>
-    <div class="barrier-card">
-      <h3>購入前の不安 02</h3>
-      <p>乾燥感が心配な方へ。しっとり感を意識した価値訴求と、毎日使いやすい方向で整理しています。</p>
-    </div>
-    <div class="barrier-card">
-      <h3>購入前の不安 03</h3>
-      <p>日常使いできるか不安な方へ。朝の時短メイクや軽く整えたい日など、具体的な使用シーンを増やして判断しやすくしています。</p>
-    </div>
-    <div class="barrier-card">
-      <h3>購入前の不安 04</h3>
-      <p>自分に合うか迷う方へ。重さを出しすぎずに肌印象を整えたい方に合いやすい設計として整理しています。</p>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="full-card">
-    <h2>最終CTA</h2>
-    <p>厚塗り感は避けたい。けれど、何もしていないようには見せたくない。そんな日に選びやすい1本として、educate B を見直してください。</p>
-    <div style="height:18px"></div>
-    <a class="cta-strong" href="https://kuu-medic.jp/" target="_blank" rel="noopener noreferrer">educate B の商品詳細を見る</a>
-    <div class="cta-subnote">自然に整った印象へ。軽さ、ツヤ感、使いやすさのバランスを確認してください。</div>
-  </div>
-</section>
-
-
-<section class="section">
-  <div class="full-card">
-    <h2>3つのベネフィットを分解して伝える</h2>
-    <div class="point-grid-3">
-      <div class="point-card">
-        <h3>01 自然なツヤ</h3>
-        <p>作り込みすぎた印象ではなく、整って見える肌印象を目指したい日に取り入れやすい方向です。</p>
-      </div>
-      <div class="point-card">
-        <h3>02 均一なトーン</h3>
-        <p>厚く隠すのではなく、全体の見え方を整えたい方に向けて、販売LPとして訴求を整理しています。</p>
-      </div>
-      <div class="point-card">
-        <h3>03 しっとり感</h3>
-        <p>乾燥感が気になる日にも使いやすい印象を持てるよう、価値の見せ方を強めています。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="full-card">
-    <h2>朝の使い方イメージ</h2>
-    <div class="flow-steps">
-      <div class="flow-step">
-        <div class="flow-no">STEP 01</div>
-        <h3>スキンケア後に整える</h3>
-        <p>ベースメイク前の流れに自然に入れやすい想定で、毎朝の導線に置きやすい設計です。</p>
-      </div>
-      <div class="flow-step">
-        <div class="flow-no">STEP 02</div>
-        <h3>重たく見せすぎない</h3>
-        <p>きちんと感は欲しいけれど、厚塗り感は避けたい。そんな日の中間を狙った見せ方です。</p>
-      </div>
-      <div class="flow-step">
-        <div class="flow-no">STEP 03</div>
-        <h3>そのまま外出しやすい</h3>
-        <p>朝の判断コストを減らしながら、整った肌印象へつなげたい人に向けた販売導線です。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="cta-final-strong">
-    <h2>迷った日は、重ねるより整える。</h2>
-    <p>厚塗り感は避けたい。けれど何もしていないようには見せたくない。そんな日に、educate B の設計を確認してください。</p>
-    <div style="height:16px"></div>
-    <a class="cta" href="https://kuu-medic.jp/" target="_blank" rel="noopener noreferrer">educate B の商品詳細を見る</a>
-    <div class="cta-subnote" style="color:rgba(255,255,255,.72)">軽さ・ツヤ感・使いやすさのバランスをチェックできます。</div>
-  </div>
-</section>
 
 </body>
 </html>
