@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>educate B LP v5</title>
+<title>educate B LP v6</title>
 <style>
 :root {
   --bg:#f7f2ed;
@@ -232,6 +232,26 @@ h1 {
   .spec-row{grid-template-columns:1fr}
 }
 
+
+.compare-table{display:grid;gap:0;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:#fff}
+.compare-row{display:grid;grid-template-columns:220px 1fr 1fr;gap:0}
+.compare-row > div{padding:16px 18px;border-bottom:1px solid var(--line)}
+.compare-head{background:#f2e7dc;font-weight:800}
+.compare-key{background:#faf6f1;font-weight:700}
+.barrier-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.barrier-card{background:#fff;border:1px solid var(--line);border-radius:26px;padding:26px}
+.barrier-card h3{margin:0 0 12px;font-size:24px;line-height:1.2}
+.cta-strong{display:inline-flex;align-items:center;justify-content:center;min-height:72px;padding:0 34px;border-radius:999px;background:#1f1f22;color:#fff;text-decoration:none;font-size:21px;font-weight:800;letter-spacing:.01em}
+.cta-subnote{margin-top:14px;color:var(--sub);font-size:16px}
+.role-gallery{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.role-shot{min-height:280px;border:1px solid var(--line);border-radius:24px;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.role-shot img{width:84%;object-fit:contain;filter:drop-shadow(0 16px 26px rgba(0,0,0,.12))}
+.role-label{padding:10px 14px 0;color:#8d756a;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+@media (max-width:900px){
+  .compare-row{grid-template-columns:1fr}
+  .barrier-grid,.role-gallery{grid-template-columns:1fr}
+}
+
 </style>
 </head>
 <body>
@@ -240,7 +260,7 @@ h1 {
       <div class="hero-grid">
         <div>
           <div class="eyebrow">BB BASE MAKE / EDUCATE B</div>
-          <h1>厚塗りはしたくない。<br>でも、肌印象はきれいに整えたい。</h1>
+          <h1>厚塗り感は避けたい。<br>でも、肌印象はきれいに整えたい。</h1>
           <p class="lead">自然なツヤ、均一なトーン、しっとり感を意識しながら、重たく見せすぎずに肌印象を整えたい日に取り入れやすいBB下地。</p>
           <div class="benefit-row"><div class="benefit-card">厚塗り感を抑えて肌印象を整える</div><div class="benefit-card">乾燥感を避けながら心地よく使える</div><div class="benefit-card">ベースメイク時間を上質なケア発想へ</div></div>
           <a class="cta" href="https://kuu-medic.com/products/educate-b" target="_blank" rel="noopener noreferrer">自分の肌印象を整える一歩を始める</a>
@@ -508,6 +528,95 @@ h1 {
       <a class="cta" href="https://kuu-medic.jp/" target="_blank" rel="noopener noreferrer">まずは商品詳細を確認する</a>
       <div class="note-soft">自然に整った印象へ。軽さと上質感のバランスを確認してください。</div>
     </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="full-card">
+    <h2>見せ方を分けた商品ビジュアル</h2>
+    <div class="role-gallery">
+      <div>
+        <div class="role-label">HERO</div>
+        <div class="role-shot"><img src="https://kuu-medic.com/cdn/shop/files/fit_cover_w_920_h_920.avif?v=1758074455" alt="educate B hero"></div>
+      </div>
+      <div>
+        <div class="role-label">TEXTURE / DAILY</div>
+        <div class="role-shot"><img src="https://kuu-medic.com/cdn/shop/files/fit_cover_w_920_h_920.avif?v=1758074455" alt="educate B daily"></div>
+      </div>
+      <div>
+        <div class="role-label">GALLERY</div>
+        <div class="role-shot"><img src="https://kuu-medic.com/cdn/shop/files/fit_cover_w_920_h_920.avif?v=1758074455" alt="educate B gallery"></div>
+      </div>
+      <div>
+        <div class="role-label">CTA</div>
+        <div class="role-shot"><img src="https://kuu-medic.com/cdn/shop/files/fit_cover_w_920_h_920.avif?v=1758074455" alt="educate B cta"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="full-card">
+    <h2>educate B が選ばれやすい理由</h2>
+    <div class="compare-table">
+      <div class="compare-row compare-head">
+        <div>比較軸</div>
+        <div>educate B</div>
+        <div>よくある重ためベースの悩み</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-key">仕上がり印象</div>
+        <div>自然なツヤと整った印象を目指しやすい</div>
+        <div>きちんと感は出ても重たく見えやすいことがある</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-key">使いやすさ</div>
+        <div>毎日のベースメイクに取り入れやすい方向で設計</div>
+        <div>日によっては重く感じやすい</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-key">見せ方</div>
+        <div>隠すより整えて魅せる方向</div>
+        <div>カバー重視で厚塗り感が出やすい場合がある</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-key">相性がいい日</div>
+        <div>時短で整えたい日、軽く仕上げたい日</div>
+        <div>しっかり作り込みたい日</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="barrier-grid">
+    <div class="barrier-card">
+      <h3>購入前の不安 01</h3>
+      <p>厚塗り感が出ないか気になる方へ。LPでは、隠すためではなく、整って見える印象づくりを重視した見せ方に寄せています。</p>
+    </div>
+    <div class="barrier-card">
+      <h3>購入前の不安 02</h3>
+      <p>乾燥感が心配な方へ。しっとり感を意識した価値訴求と、毎日使いやすい方向で整理しています。</p>
+    </div>
+    <div class="barrier-card">
+      <h3>購入前の不安 03</h3>
+      <p>日常使いできるか不安な方へ。朝の時短メイクや軽く整えたい日など、具体的な使用シーンを増やして判断しやすくしています。</p>
+    </div>
+    <div class="barrier-card">
+      <h3>購入前の不安 04</h3>
+      <p>自分に合うか迷う方へ。重さを出しすぎずに肌印象を整えたい方に合いやすい設計として整理しています。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="full-card">
+    <h2>最終CTA</h2>
+    <p>厚塗り感は避けたい。けれど、何もしていないようには見せたくない。そんな日に選びやすい1本として、educate B を見直してください。</p>
+    <div style="height:18px"></div>
+    <a class="cta-strong" href="https://kuu-medic.jp/" target="_blank" rel="noopener noreferrer">educate B の商品詳細を見る</a>
+    <div class="cta-subnote">自然に整った印象へ。軽さ、ツヤ感、使いやすさのバランスを確認してください。</div>
   </div>
 </section>
 
