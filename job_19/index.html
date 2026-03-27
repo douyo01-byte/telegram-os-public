@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>educate B LP v4</title>
+<title>educate B LP v5</title>
 <style>
 :root {
   --bg:#f7f2ed;
@@ -210,6 +210,28 @@ h1 {
   .summary-shot { min-height:340px; }
   h1 { font-size:clamp(40px,12vw,66px); }
 }
+
+.sales-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.sales-card{background:var(--paper);border:1px solid var(--line);border-radius:28px;padding:28px}
+.sales-card h3{margin:0 0 12px;font-size:26px;line-height:1.2}
+.full-card{background:var(--paper);border:1px solid var(--line);border-radius:30px;padding:34px}
+.full-card h2{margin:0 0 16px;font-size:clamp(28px,4vw,48px);line-height:1.15}
+.full-card p,.full-card li{font-size:18px}
+.full-card ul{margin:16px 0 0;padding-left:1.2em}
+.spec-table{display:grid;gap:0}
+.spec-row{display:grid;grid-template-columns:220px 1fr;gap:18px;padding:16px 0;border-bottom:1px solid var(--line)}
+.spec-key{font-weight:800}
+.spec-val{color:var(--sub)}
+.cta-stack{display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+.note-soft{color:var(--sub);font-size:16px}
+.big-gallery{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.big-shot{min-height:340px;border:1px solid var(--line);border-radius:26px;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.big-shot img{width:84%;object-fit:contain;filter:drop-shadow(0 16px 26px rgba(0,0,0,.12))}
+@media (max-width:900px){
+  .sales-grid,.big-gallery{grid-template-columns:1fr}
+  .spec-row{grid-template-columns:1fr}
+}
+
 </style>
 </head>
 <body>
@@ -218,8 +240,8 @@ h1 {
       <div class="hero-grid">
         <div>
           <div class="eyebrow">BB BASE MAKE / EDUCATE B</div>
-          <h1>厚塗りはしたくない。 でも、肌印象はきれいに整えたい。</h1>
-          <p class="lead">自然なツヤ、均一なトーン、しっとり感を意識した、 毎日使いやすいBB下地。</p>
+          <h1>厚塗りはしたくない。<br>でも、肌印象はきれいに整えたい。</h1>
+          <p class="lead">自然なツヤ、均一なトーン、しっとり感を意識しながら、重たく見せすぎずに肌印象を整えたい日に取り入れやすいBB下地。</p>
           <div class="benefit-row"><div class="benefit-card">厚塗り感を抑えて肌印象を整える</div><div class="benefit-card">乾燥感を避けながら心地よく使える</div><div class="benefit-card">ベースメイク時間を上質なケア発想へ</div></div>
           <a class="cta" href="https://kuu-medic.com/products/educate-b" target="_blank" rel="noopener noreferrer">自分の肌印象を整える一歩を始める</a>
           <div class="subline">隠すためではなく、整えて魅せるためのベースメイク発想。</div>
@@ -373,6 +395,118 @@ h1 {
       <div class="gallery-item"><img class="gallery-product" src="https://kuu-medic.com/cdn/shop/files/fit_cover_w_920_h_920.avif?v=1758074455" alt="educate B"></div>
       <div class="gallery-item"><img class="gallery-product" src="https://kuu-medic.com/cdn/shop/files/fit_cover_w_920_h_920.avif?v=1758074455" alt="educate B"></div>
       <div class="gallery-item"><img class="gallery-product" src="https://kuu-medic.com/cdn/shop/files/fit_cover_w_920_h_920.avif?v=1758074455" alt="educate B"></div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="full-card">
+    <h2>こんな方に選びやすい設計です</h2>
+    <ul>
+      <li>厚塗り感は避けたいが、肌印象は整えて見せたい</li>
+      <li>朝のベースメイクを重たくしたくない</li>
+      <li>自然なツヤ感を意識した仕上がりが好き</li>
+      <li>乾燥感が気になる日でも使いやすさを重視したい</li>
+      <li>きちんと感と軽さを両立したい</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="sales-grid">
+    <div class="sales-card">
+      <h3>自然なツヤ</h3>
+      <p>隠しすぎる方向ではなく、やわらかく整って見える印象へ。ベースメイクを重く見せたくない日に取り入れやすい見せ方です。</p>
+    </div>
+    <div class="sales-card">
+      <h3>均一なトーン</h3>
+      <p>肌全体の印象をなめらかに整えて、きれいに見せたい日に。日常使いしやすい方向で価値を伝える販売LP構成にしています。</p>
+    </div>
+    <div class="sales-card">
+      <h3>しっとり感</h3>
+      <p>使用感の心地よさも意識しながら、毎日のベースメイクに取り入れやすい1本として見せています。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-grid">
+    <div class="full-card">
+      <h2>成分発想と使用感のつながり</h2>
+      <p>LPでは成分名の羅列ではなく、なぜその処方発想が「重たく見せすぎない」「自然な印象に整える」「毎日使いやすい」という使用感訴求につながるのかを重視して整理しています。</p>
+      <ul>
+        <li>セラミド系成分 : しっとり感を意識した見せ方</li>
+        <li>植物由来オイル : やわらかな使用感イメージの補強</li>
+        <li>美容発想成分 : ベースメイク時間をケア発想へ寄せる訴求</li>
+      </ul>
+    </div>
+    <div class="full-card">
+      <h2>商品ビジュアル</h2>
+      <div class="big-gallery">
+        <div class="big-shot"><img src="https://kuu-medic.com/cdn/shop/files/fit_cover_w_920_h_920.avif?v=1758074455" alt="educate B"></div>
+        <div class="big-shot"><img src="https://kuu-medic.com/cdn/shop/files/fit_cover_w_920_h_920.avif?v=1758074455" alt="educate B"></div>
+        <div class="big-shot"><img src="https://kuu-medic.com/cdn/shop/files/fit_cover_w_920_h_920.avif?v=1758074455" alt="educate B"></div>
+        <div class="big-shot"><img src="https://kuu-medic.com/cdn/shop/files/fit_cover_w_920_h_920.avif?v=1758074455" alt="educate B"></div>
+        <div class="big-shot"><img src="https://kuu-medic.com/cdn/shop/files/fit_cover_w_920_h_920.avif?v=1758074455" alt="educate B"></div>
+        <div class="big-shot"><img src="https://kuu-medic.com/cdn/shop/files/fit_cover_w_920_h_920.avif?v=1758074455" alt="educate B"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="sales-grid">
+    <div class="sales-card">
+      <h3>朝の時短メイク</h3>
+      <p>短い時間でも肌印象を整えたい朝に。</p>
+    </div>
+    <div class="sales-card">
+      <h3>軽く仕上げたい日</h3>
+      <p>重たさを出したくないけれど、きちんと感は欲しい日に。</p>
+    </div>
+    <div class="sales-card">
+      <h3>乾燥感が気になる日</h3>
+      <p>心地よさを意識しながらベースメイクを整えたい日に。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="full-card">
+    <h2>よくある質問</h2>
+    <ul>
+      <li>厚塗り感は出やすい？ → LP上は、隠すより整えて見せる方向で訴求しています。</li>
+      <li>どんな日に向いている？ → 朝の時短メイク、軽く仕上げたい日、乾燥感が気になる日に向きます。</li>
+      <li>毎日使いやすい？ → 毎日手に取りやすい使用感を意識した販売設計です。</li>
+      <li>自然な印象を目指したい人にも合う？ → ナチュラルに整った印象を目指す方向と相性が良いです。</li>
+      <li>成分重視の人にも向いている？ → 成分と使用感の関係を見ながら選びたい方に向いています。</li>
+      <li>どこを見て選べばいい？ → 仕上がり、軽さ、しっとり感の3点で見ると選びやすいです。</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="full-card">
+    <h2>商品スペック</h2>
+    <div class="spec-table">
+      <div class="spec-row"><div class="spec-key">商品名</div><div class="spec-val">educate B</div></div>
+      <div class="spec-row"><div class="spec-key">カテゴリ</div><div class="spec-val">BBクリーム / 化粧下地</div></div>
+      <div class="spec-row"><div class="spec-key">訴求軸</div><div class="spec-val">自然なツヤ / 均一なトーン / しっとり感</div></div>
+      <div class="spec-row"><div class="spec-key">おすすめ像</div><div class="spec-val">厚塗り感は避けたいが、肌印象は整えたい方</div></div>
+      <div class="spec-row"><div class="spec-key">見せ方</div><div class="spec-val">商品写真主役・スマホ縦読み重視・販売LP構成</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="full-card">
+    <h2>最後のひと押し</h2>
+    <p>ベースメイクを重たくしたくない。けれど、何もしていないようには見せたくない。そんな日に、選びやすい1本として見せています。</p>
+    <div style="height:18px"></div>
+    <div class="cta-stack">
+      <a class="cta" href="https://kuu-medic.jp/" target="_blank" rel="noopener noreferrer">まずは商品詳細を確認する</a>
+      <div class="note-soft">自然に整った印象へ。軽さと上質感のバランスを確認してください。</div>
     </div>
   </div>
 </section>
