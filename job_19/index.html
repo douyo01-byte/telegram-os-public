@@ -1,292 +1,151 @@
 <!doctype html>
 <html lang="ja">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>educate B LP v2</title>
-<style>
-:root {
-  --bg:#f7f2ed;
-  --paper:#fffdfa;
-  --ink:#1f1f22;
-  --sub:#6f6660;
-  --line:#eadfd6;
-}
-* { box-sizing:border-box; }
-body {
-  margin:0;
-  font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic","Noto Sans JP",sans-serif;
-  background:var(--bg);
-  color:var(--ink);
-  line-height:1.75;
-}
-img { display:block; max-width:100%; }
-.wrap {
-  width:min(100%,1180px);
-  margin:0 auto;
-  padding:28px 18px 84px;
-}
-.hero {
-  padding:30px 0 40px;
-}
-.hero-grid {
-  display:grid;
-  grid-template-columns:1.05fr .95fr;
-  gap:34px;
-  align-items:center;
-}
-.eyebrow {
-  font-size:14px;
-  letter-spacing:.14em;
-  color:#93776d;
-  margin-bottom:18px;
-}
-h1 {
-  margin:0 0 18px;
-  font-size:clamp(42px,7vw,82px);
-  line-height:1.06;
-  letter-spacing:-0.04em;
-}
-.lead {
-  margin:0 0 22px;
-  color:var(--sub);
-  font-size:clamp(18px,2.5vw,30px);
-}
-.benefit-row {
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:16px;
-  margin:26px 0 20px;
-}
-.benefit-card {
-  background:rgba(255,255,255,.8);
-  border:1px solid var(--line);
-  border-radius:24px;
-  padding:20px 18px;
-  min-height:110px;
-  display:flex;
-  align-items:center;
-  font-size:18px;
-}
-.cta {
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-height:68px;
-  padding:0 30px;
-  border-radius:999px;
-  background:#1f1f22;
-  color:#fff;
-  text-decoration:none;
-  font-size:20px;
-  font-weight:800;
-  letter-spacing:.01em;
-  margin-top:4px;
-}
-.subline {
-  margin-top:18px;
-  color:#7f726c;
-  font-size:16px;
-}
-.hero-visual {
-  min-height:560px;
-  border-radius:34px;
-  border:1px solid var(--line);
-  background-size:cover;
-  background-position:center;
-  position:relative;
-  overflow:hidden;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-.hero-product {
-  width:86%;
-  max-width:520px;
-  object-fit:contain;
-  filter:drop-shadow(0 20px 30px rgba(0,0,0,.12));
-}
-.placeholder {
-  flex-direction:column;
-  color:#997f74;
-  text-align:center;
-}
-.placeholder-over {
-  font-size:18px;
-  letter-spacing:.14em;
-  margin-bottom:18px;
-}
-.placeholder-name {
-  font-size:62px;
-  font-weight:800;
-  line-height:1.08;
-}
-.section {
-  padding:58px 0;
-}
-.section-grid {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:28px;
-}
-.card {
-  background:var(--paper);
-  border:1px solid var(--line);
-  border-radius:30px;
-  padding:30px;
-}
-.card h2 {
-  margin:0 0 16px;
-  font-size:clamp(28px,4vw,52px);
-  line-height:1.12;
-  letter-spacing:-0.03em;
-}
-.card p, .card li {
-  font-size:18px;
-}
-.card ul {
-  margin:16px 0 0;
-  padding-left:1.2em;
-}
-.gallery-wrap {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:18px;
-  margin-top:18px;
-}
-.gallery-item {
-  min-height:280px;
-  border-radius:24px;
-  border:1px solid var(--line);
-  background-size:cover;
-  background-position:center;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  overflow:hidden;
-}
-.gallery-product {
-  width:82%;
-  object-fit:contain;
-  filter:drop-shadow(0 14px 24px rgba(0,0,0,.10));
-}
-.placeholder-small {
-  color:#9b7f75;
-  font-size:28px;
-  font-weight:700;
-}
-.summary-grid {
-  display:grid;
-  grid-template-columns:.92fr 1.08fr;
-  gap:28px;
-  align-items:center;
-}
-.summary-shot {
-  min-height:460px;
-  border-radius:30px;
-  border:1px solid var(--line);
-  background-size:cover;
-  background-position:center;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  overflow:hidden;
-  background-image:url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%221200%22%20height%3D%221400%22%20viewBox%3D%220%200%201200%201400%22%3E%0A%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%3E%0A%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23f0e6dc%22/%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23faf5ef%22/%3E%0A%3C/linearGradient%3E%3C/defs%3E%0A%3Crect%20width%3D%221200%22%20height%3D%221400%22%20fill%3D%22url%28%23g%29%22/%3E%0A%3Ccircle%20cx%3D%22180%22%20cy%3D%22240%22%20r%3D%22180%22%20fill%3D%22%23cfb7a3%22%20opacity%3D%220.12%22/%3E%0A%3Ccircle%20cx%3D%221000%22%20cy%3D%22260%22%20r%3D%22200%22%20fill%3D%22%23cfb7a3%22%20opacity%3D%220.10%22/%3E%0A%3Ccircle%20cx%3D%22900%22%20cy%3D%221100%22%20r%3D%22260%22%20fill%3D%22%23cfb7a3%22%20opacity%3D%220.10%22/%3E%0A%3C/svg%3E');
-}
-.summary-shot img {
-  width:84%;
-  object-fit:contain;
-  filter:drop-shadow(0 16px 26px rgba(0,0,0,.12));
-}
-@media (max-width:900px) {
-  .hero-grid,
-  .section-grid,
-  .summary-grid,
-  .benefit-row,
-  .gallery-wrap {
-    grid-template-columns:1fr;
-  }
-  .hero-visual { min-height:420px; }
-  .summary-shot { min-height:340px; }
-  h1 { font-size:clamp(40px,12vw,66px); }
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>educate B</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", sans-serif;
+      background: #f3f1ee;
+      color: #2d2a28;
+      line-height: 1.8;
+    }
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+    .card {
+      background: #fcfbf9;
+      border-radius: 28px;
+      padding: 28px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.04);
+      margin-bottom: 24px;
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 24px;
+      align-items: center;
+    }
+    .eyebrow {
+      color: #8b7d71;
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      margin-bottom: 10px;
+    }
+    h1 {
+      font-size: 54px;
+      line-height: 1.12;
+      margin: 0 0 14px 0;
+    }
+    .sub {
+      font-size: 20px;
+      color: #5c534c;
+      margin-bottom: 18px;
+    }
+    .benefits {
+      padding-left: 20px;
+      margin: 0 0 22px 0;
+    }
+    .btn {
+      display: inline-block;
+      background: #c9a977;
+      color: #fff;
+      text-decoration: none;
+      padding: 16px 30px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 20px;
+    }
+    .hero-image {
+      width: 100%;
+      max-width: 420px;
+      display: block;
+      margin: 0 auto;
+      border-radius: 24px;
+      background: #fff;
+    }
+    .placeholder {
+      min-height: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #8b7d71;
+      background: #efe8df;
+    }
+    h2 {
+      font-size: 34px;
+      line-height: 1.3;
+      margin: 0 0 14px 0;
+    }
+    p {
+      font-size: 20px;
+      margin: 0;
+    }
+    .cta-final {
+      text-align: center;
+    }
+    .cta-final p {
+      margin-bottom: 18px;
+    }
+    @media (max-width: 800px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+      h1 {
+        font-size: 40px;
+      }
+      p {
+        font-size: 18px;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="wrap">
-    <section class="hero">
-      <div class="hero-grid">
-        <div>
-          <div class="eyebrow">BB BASE MAKE / EDUCATE B</div>
-          <h1>厚塗りはしたくない。 でも、肌印象はきれいに整えたい。</h1>
-          <p class="lead">自然なツヤ、均一なトーン、しっとり感を意識した、 毎日使いやすいBB下地。</p>
-          <div class="benefit-row"><div class="benefit-card">厚塗り感を抑えて肌印象を整える</div><div class="benefit-card">乾燥感を避けながら心地よく使える</div><div class="benefit-card">ベースメイク時間を上質なケア発想へ</div></div>
-          <a class="cta" href="https://kuu-medic.com/products/educate-b" target="_blank" rel="noopener noreferrer">自分の肌印象を整える一歩を始める</a>
-          <div class="subline">隠すためではなく、整えて魅せるためのベースメイク発想。</div>
-        </div>
-        <div>
-<div class="hero-visual" style="background-image:url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%221200%22%20height%3D%221400%22%20viewBox%3D%220%200%201200%201400%22%3E%0A%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%3E%0A%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23efe4da%22/%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23fbf7f2%22/%3E%0A%3C/linearGradient%3E%3C/defs%3E%0A%3Crect%20width%3D%221200%22%20height%3D%221400%22%20fill%3D%22url%28%23g%29%22/%3E%0A%3Ccircle%20cx%3D%22180%22%20cy%3D%22240%22%20r%3D%22180%22%20fill%3D%22%23d7bfae%22%20opacity%3D%220.12%22/%3E%0A%3Ccircle%20cx%3D%221000%22%20cy%3D%22260%22%20r%3D%22200%22%20fill%3D%22%23d7bfae%22%20opacity%3D%220.10%22/%3E%0A%3Ccircle%20cx%3D%22900%22%20cy%3D%221100%22%20r%3D%22260%22%20fill%3D%22%23d7bfae%22%20opacity%3D%220.10%22/%3E%0A%3C/svg%3E')">
-  <img class="hero-product" src="https://kuu-medic.com/cdn/shop/files/fit_cover_w_920_h_920.avif?v=1758074455" alt="educate B">
-</div></div>
+    <section class="card hero">
+      <div>
+        <div class="eyebrow">educate B</div>
+        <h1>隠すより、整えて魅せる。</h1>
+        <div class="sub">自然なツヤ、均一なトーン、しっとり感を意識した、毎日使いやすいBB下地。</div>
+        <ul class="benefits"><li>自然なツヤ</li><li>均一なトーン</li><li>しっとり感</li></ul>
+        <a class="btn" href="https://kuu-medic.com/products/educate-b">educate B の魅力を確認する</a>
       </div>
+      <div><img src="http://kuu-medic.com/cdn/shop/files/fit_cover_w_920_h_920.avif?v=1758074455" alt="educate B" class="hero-image"></div>
     </section>
 
-    <section class="section">
-      <div class="section-grid">
-        <div class="card">
-          <h2>こんな方へ</h2>
-          <p>ベースメイクを重たくしたくない方へ。自然な印象を保ちながら、肌をきれいに見せたい日に取り入れやすい設計です。</p>
-          <ul><li>厚塗り感は出したくない</li><li>肌印象を自然に整えたい</li><li>乾燥感を避けたい</li></ul>
-        </div>
-        <div class="card">
-          <h2>educate B の価値</h2>
-          <p>目指したのは、隠しすぎずに整った印象。自然なツヤ、均一なトーン、しっとり感を意識しながら、毎日のメイクを軽やかに支えます。</p>
-        </div>
-      </div>
+    <section class="card">
+      <h2>毎日のベースメイクを、もっと心地よく。</h2>
+      <p>自然なツヤ、均一なトーン、しっとり感を意識しながら、毎日のベースメイクを心地よく整えるBB下地。</p>
     </section>
 
-    <section class="section">
-      <div class="section-grid">
-        <div class="card">
-          <h2>成分発想</h2>
-          <p>セラミド系成分や植物由来オイルを含む処方発想で、仕上がりだけでなく使い心地にも目を向けたベースメイクです。</p>
-        </div>
-        <div class="card">
-          <h2>使用イメージ</h2>
-          <p>忙しい朝でも手に取りやすく、肌印象を整えたい日に自然になじむ。毎日のメイク時間を、少し心地よいものへ寄せていきます。</p>
-          <div class="gallery-wrap">
-            
-<div class="gallery-item" style="background-image:url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%221200%22%20height%3D%221400%22%20viewBox%3D%220%200%201200%201400%22%3E%0A%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%3E%0A%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23f5eadf%22/%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23fcf8f4%22/%3E%0A%3C/linearGradient%3E%3C/defs%3E%0A%3Crect%20width%3D%221200%22%20height%3D%221400%22%20fill%3D%22url%28%23g%29%22/%3E%0A%3Ccircle%20cx%3D%22180%22%20cy%3D%22240%22%20r%3D%22180%22%20fill%3D%22%23ceb6a2%22%20opacity%3D%220.12%22/%3E%0A%3Ccircle%20cx%3D%221000%22%20cy%3D%22260%22%20r%3D%22200%22%20fill%3D%22%23ceb6a2%22%20opacity%3D%220.10%22/%3E%0A%3Ccircle%20cx%3D%22900%22%20cy%3D%221100%22%20r%3D%22260%22%20fill%3D%22%23ceb6a2%22%20opacity%3D%220.10%22/%3E%0A%3C/svg%3E')">
-  <img class="gallery-product" src="http://kuu-medic.com/cdn/shop/files/fit_cover_w_920_h_920.avif?v=1758074455" alt="educate B">
-</div>
-            
-<div class="gallery-item" style="background-image:url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%221200%22%20height%3D%221400%22%20viewBox%3D%220%200%201200%201400%22%3E%0A%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%3E%0A%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23f3eee9%22/%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23fcf8f4%22/%3E%0A%3C/linearGradient%3E%3C/defs%3E%0A%3Crect%20width%3D%221200%22%20height%3D%221400%22%20fill%3D%22url%28%23g%29%22/%3E%0A%3Ccircle%20cx%3D%22180%22%20cy%3D%22240%22%20r%3D%22180%22%20fill%3D%22%23ceb6a2%22%20opacity%3D%220.12%22/%3E%0A%3Ccircle%20cx%3D%221000%22%20cy%3D%22260%22%20r%3D%22200%22%20fill%3D%22%23ceb6a2%22%20opacity%3D%220.10%22/%3E%0A%3Ccircle%20cx%3D%22900%22%20cy%3D%221100%22%20r%3D%22260%22%20fill%3D%22%23ceb6a2%22%20opacity%3D%220.10%22/%3E%0A%3C/svg%3E')">
-  <img class="gallery-product" src="https://kuu-medic.com/cdn/shop/files/fit_cover_w_920_h_920.avif?v=1758074455" alt="educate B">
-</div>
-          </div>
-        </div>
-      </div>
+    <section class="card">
+      <h2>こんな方へ</h2>
+      <p>厚塗り感は出したくないけれど、肌印象はきれいに整えたい。そんな方に向けた、毎日使いやすいベースメイク発想です。</p>
     </section>
 
-    <section class="section">
-      <div class="summary-grid">
-        <div class="summary-shot">
-          <img src="https://kuu-medic.com/cdn/shop/files/fit_cover_w_920_h_920.avif?v=1758074455" alt="educate B">
-        </div>
-        <div class="card">
-          <h2>商品要約</h2>
-          <p>重さを出しすぎず、乾燥感を避けながら、肌印象を整えたい方へ。educate B は、仕上がりと心地よさの両立を目指したBB下地です。</p>
-          <div style="height:22px"></div>
-          <a class="cta" href="https://kuu-medic.com/products/educate-b" target="_blank" rel="noopener noreferrer">自分の肌印象を整える一歩を始める</a>
-        </div>
-      </div>
+    <section class="card">
+      <h2>educate B の価値</h2>
+      <p>隠すことを目的にするのではなく、肌そのものが整って見える印象へ。自然なツヤと均一なトーンを意識し、重さを抑えながら使いやすさを目指します。</p>
     </section>
 
-    <section class="section">
-      <div class="card">
-        <h2>クロージング</h2>
-        <p>まずは商品詳細を確認して、自分の肌印象に合う使い方を見つけてください。</p>
-      </div>
+    <section class="card">
+      <h2>着眼成分と発想</h2>
+      <p>EGF、ビタミンE、セラミド群、植物オイルなどの着眼成分をもとに、仕上がりだけでなく毎日手に取りやすい使用感にも目を向けた設計です。</p>
+    </section>
+
+    <section class="card">
+      <h2>使いやすさを意識した設計</h2>
+      <p></p>
+    </section>
+
+    <section class="card cta-final">
+      <h2>まずは商品詳細を確認し、自分に合う使い方を検討してください。</h2>
+      <p></p>
+      <a class="btn" href="https://kuu-medic.com/products/educate-b">educate B の魅力を確認する</a>
     </section>
   </div>
 </body>
