@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>educate B LP v6</title>
+<title>educate B LP v7</title>
 <style>
 :root {
   --bg:#f7f2ed;
@@ -250,6 +250,29 @@ h1 {
 @media (max-width:900px){
   .compare-row{grid-template-columns:1fr}
   .barrier-grid,.role-gallery{grid-template-columns:1fr}
+}
+
+
+.visual-grid-4{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.visual-card{border:1px solid var(--line);border-radius:26px;overflow:hidden;background:#fff}
+.visual-card img{width:100%;height:280px;object-fit:cover;display:block}
+.visual-card .cap{padding:16px 18px}
+.visual-card .cap h3{margin:0 0 8px;font-size:24px;line-height:1.2}
+.visual-card .cap p{margin:0;color:var(--sub);font-size:16px}
+.point-grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px}
+.point-card{background:#fff;border:1px solid var(--line);border-radius:26px;padding:26px}
+.point-card h3{margin:0 0 12px;font-size:24px;line-height:1.2}
+.point-card p{margin:0;color:var(--sub)}
+.flow-steps{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px}
+.flow-step{background:#fff;border:1px solid var(--line);border-radius:26px;padding:24px}
+.flow-no{font-size:14px;letter-spacing:.12em;color:#8c7267;margin-bottom:10px}
+.flow-step h3{margin:0 0 10px;font-size:24px}
+.cta-final-strong{padding:34px;border-radius:28px;background:#1f1f22;color:#fff}
+.cta-final-strong h2{margin:0 0 12px;color:#fff}
+.cta-final-strong p{color:rgba(255,255,255,.82)}
+.cta-final-strong .cta{background:#fff;color:#1f1f22}
+@media (max-width:900px){
+  .visual-grid-4,.point-grid-3,.flow-steps{grid-template-columns:1fr}
 }
 
 </style>
@@ -532,29 +555,43 @@ h1 {
 </section>
 
 
+
 <section class="section">
   <div class="full-card">
-    <h2>見せ方を分けた商品ビジュアル</h2>
-    <div class="role-gallery">
-      <div>
-        <div class="role-label">HERO</div>
-        <div class="role-shot"><img src="https://kuu-medic.com/cdn/shop/files/fit_cover_w_920_h_920.avif?v=1758074455" alt="educate B hero"></div>
+    <h2>見せ方を変えて、価値を伝える</h2>
+    <div class="visual-grid-4">
+      <div class="visual-card">
+        <img src="https://kuu-medic.com/cdn/shop/files/fit_cover_w_920_h_920.avif?v=1758074455" alt="educate B product">
+        <div class="cap">
+          <h3>商品そのものを主役に</h3>
+          <p>FVでは商品写真を大きく見せ、何の商品かを一目で伝えます。</p>
+        </div>
       </div>
-      <div>
-        <div class="role-label">TEXTURE / DAILY</div>
-        <div class="role-shot"><img src="https://kuu-medic.com/cdn/shop/files/fit_cover_w_920_h_920.avif?v=1758074455" alt="educate B daily"></div>
+      <div class="visual-card">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjkwMCIgdmlld0JveD0iMCAwIDEyMDAgOTAwIj4KPGRlZnM+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeDI9IjEiIHkxPSIwIiB5Mj0iMSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZWZlMWQ0Ii8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkOGMwYWUiLz4KICA8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+CjxyZWN0IHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjkwMCIgZmlsbD0idXJsKCNnKSIvPgo8Y2lyY2xlIGN4PSI5ODAiIGN5PSIxNDAiIHI9IjE4MCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwuMjIpIi8+CjxjaXJjbGUgY3g9IjE2MCIgY3k9Ijc2MCIgcj0iMjIwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LC4xMikiLz4KPHJlY3QgeD0iOTAiIHk9IjkwIiByeD0iNDAiIHJ5PSI0MCIgd2lkdGg9IjEwMjAiIGhlaWdodD0iNzIwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LC4zMCkiLz4KPHRleHQgeD0iMTIwIiB5PSIyNjAiIGZvbnQtc2l6ZT0iNzQiIGZvbnQtZmFtaWx5PSJBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmIiBmaWxsPSIjM2IzMDJiIiBmb250LXdlaWdodD0iNzAwIj7ou73jgZXjgajmlbTjgaPjgZ/ljbDosaE8L3RleHQ+Cjx0ZXh0IHg9IjEyMCIgeT0iMzU1IiBmb250LXNpemU9IjM2IiBmb250LWZhbWlseT0iQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZiIgZmlsbD0iIzNiMzAyYiIgb3BhY2l0eT0iMC44MiI+5Y6a5aGX44KK5oSf44KS6YG/44GR44Gq44GM44KJ44CB6Ieq54S244Gr6KaL44Gb44Gf44GE5pel44GrPC90ZXh0Pgo8dGV4dCB4PSIxMjAiIHk9Ijc2MCIgZm9udC1zaXplPSIyOCIgZm9udC1mYW1pbHk9IkFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWYiIGZpbGw9IiMzYjMwMmIiIG9wYWNpdHk9IjAuNTgiPkVEVUNBVEUgQiAvIFNBTEVTIFZJU1VBTDwvdGV4dD4KPC9zdmc+" alt="軽さと整った印象">
+        <div class="cap">
+          <h3>軽さと整った印象</h3>
+          <p>厚塗り感を避けたい気分に寄り添う、販売訴求用ビジュアルです。</p>
+        </div>
       </div>
-      <div>
-        <div class="role-label">GALLERY</div>
-        <div class="role-shot"><img src="https://kuu-medic.com/cdn/shop/files/fit_cover_w_920_h_920.avif?v=1758074455" alt="educate B gallery"></div>
+      <div class="visual-card">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjkwMCIgdmlld0JveD0iMCAwIDEyMDAgOTAwIj4KPGRlZnM+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeDI9IjEiIHkxPSIwIiB5Mj0iMSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZjRlOGRlIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkOWM2YmEiLz4KICA8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+CjxyZWN0IHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjkwMCIgZmlsbD0idXJsKCNnKSIvPgo8Y2lyY2xlIGN4PSI5ODAiIGN5PSIxNDAiIHI9IjE4MCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwuMjIpIi8+CjxjaXJjbGUgY3g9IjE2MCIgY3k9Ijc2MCIgcj0iMjIwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LC4xMikiLz4KPHJlY3QgeD0iOTAiIHk9IjkwIiByeD0iNDAiIHJ5PSI0MCIgd2lkdGg9IjEwMjAiIGhlaWdodD0iNzIwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LC4zMCkiLz4KPHRleHQgeD0iMTIwIiB5PSIyNjAiIGZvbnQtc2l6ZT0iNzQiIGZvbnQtZmFtaWx5PSJBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmIiBmaWxsPSIjNDAzNDJlIiBmb250LXdlaWdodD0iNzAwIj7kub7nh6XmhJ/jgpLpgb/jgZHjgZ/jgYTml6Xjgbg8L3RleHQ+Cjx0ZXh0IHg9IjEyMCIgeT0iMzU1IiBmb250LXNpemU9IjM2IiBmb250LWZhbWlseT0iQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZiIgZmlsbD0iIzQwMzQyZSIgb3BhY2l0eT0iMC44MiI+44GX44Gj44Go44KK5oSf44KS5oSP6K2Y44GX44Gf44OZ44O844K544Oh44Kk44Kv6Kit6KiIPC90ZXh0Pgo8dGV4dCB4PSIxMjAiIHk9Ijc2MCIgZm9udC1zaXplPSIyOCIgZm9udC1mYW1pbHk9IkFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWYiIGZpbGw9IiM0MDM0MmUiIG9wYWNpdHk9IjAuNTgiPkVEVUNBVEUgQiAvIFNBTEVTIFZJU1VBTDwvdGV4dD4KPC9zdmc+" alt="乾燥感を避けたい日へ">
+        <div class="cap">
+          <h3>乾燥感を避けたい日へ</h3>
+          <p>しっとり感を意識した使い心地を、説明だけでなく視覚でも補います。</p>
+        </div>
       </div>
-      <div>
-        <div class="role-label">CTA</div>
-        <div class="role-shot"><img src="https://kuu-medic.com/cdn/shop/files/fit_cover_w_920_h_920.avif?v=1758074455" alt="educate B cta"></div>
+      <div class="visual-card">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjkwMCIgdmlld0JveD0iMCAwIDEyMDAgOTAwIj4KPGRlZnM+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeDI9IjEiIHkxPSIwIiB5Mj0iMSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZWZlNmRmIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjZGI5YWIiLz4KICA8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+CjxyZWN0IHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjkwMCIgZmlsbD0idXJsKCNnKSIvPgo8Y2lyY2xlIGN4PSI5ODAiIGN5PSIxNDAiIHI9IjE4MCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwuMjIpIi8+CjxjaXJjbGUgY3g9IjE2MCIgY3k9Ijc2MCIgcj0iMjIwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LC4xMikiLz4KPHJlY3QgeD0iOTAiIHk9IjkwIiByeD0iNDAiIHJ5PSI0MCIgd2lkdGg9IjEwMjAiIGhlaWdodD0iNzIwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LC4zMCkiLz4KPHRleHQgeD0iMTIwIiB5PSIyNjAiIGZvbnQtc2l6ZT0iNzQiIGZvbnQtZmFtaWx5PSJBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmIiBmaWxsPSIjM2QzMTJiIiBmb250LXdlaWdodD0iNzAwIj7mnJ3jga7mmYLnn63jg6HjgqTjgq/jgavjgoI8L3RleHQ+Cjx0ZXh0IHg9IjEyMCIgeT0iMzU1IiBmb250LXNpemU9IjM2IiBmb250LWZhbWlseT0iQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZiIgZmlsbD0iIzNkMzEyYiIgb3BhY2l0eT0iMC44MiI+6L+344GE44Gr44GP44GE44CB5q+O5pel5L2/44GE44KE44GZ44GE5pa55ZCR44G4PC90ZXh0Pgo8dGV4dCB4PSIxMjAiIHk9Ijc2MCIgZm9udC1zaXplPSIyOCIgZm9udC1mYW1pbHk9IkFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWYiIGZpbGw9IiMzZDMxMmIiIG9wYWNpdHk9IjAuNTgiPkVEVUNBVEUgQiAvIFNBTEVTIFZJU1VBTDwvdGV4dD4KPC9zdmc+" alt="朝の時短メイクにも">
+        <div class="cap">
+          <h3>朝の時短メイクにも</h3>
+          <p>毎日使いやすい方向性を、スマホでも流し見で伝わる形にしています。</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
 
 <section class="section">
   <div class="full-card">
@@ -617,6 +654,60 @@ h1 {
     <div style="height:18px"></div>
     <a class="cta-strong" href="https://kuu-medic.jp/" target="_blank" rel="noopener noreferrer">educate B の商品詳細を見る</a>
     <div class="cta-subnote">自然に整った印象へ。軽さ、ツヤ感、使いやすさのバランスを確認してください。</div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="full-card">
+    <h2>3つのベネフィットを分解して伝える</h2>
+    <div class="point-grid-3">
+      <div class="point-card">
+        <h3>01 自然なツヤ</h3>
+        <p>作り込みすぎた印象ではなく、整って見える肌印象を目指したい日に取り入れやすい方向です。</p>
+      </div>
+      <div class="point-card">
+        <h3>02 均一なトーン</h3>
+        <p>厚く隠すのではなく、全体の見え方を整えたい方に向けて、販売LPとして訴求を整理しています。</p>
+      </div>
+      <div class="point-card">
+        <h3>03 しっとり感</h3>
+        <p>乾燥感が気になる日にも使いやすい印象を持てるよう、価値の見せ方を強めています。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="full-card">
+    <h2>朝の使い方イメージ</h2>
+    <div class="flow-steps">
+      <div class="flow-step">
+        <div class="flow-no">STEP 01</div>
+        <h3>スキンケア後に整える</h3>
+        <p>ベースメイク前の流れに自然に入れやすい想定で、毎朝の導線に置きやすい設計です。</p>
+      </div>
+      <div class="flow-step">
+        <div class="flow-no">STEP 02</div>
+        <h3>重たく見せすぎない</h3>
+        <p>きちんと感は欲しいけれど、厚塗り感は避けたい。そんな日の中間を狙った見せ方です。</p>
+      </div>
+      <div class="flow-step">
+        <div class="flow-no">STEP 03</div>
+        <h3>そのまま外出しやすい</h3>
+        <p>朝の判断コストを減らしながら、整った肌印象へつなげたい人に向けた販売導線です。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="cta-final-strong">
+    <h2>迷った日は、重ねるより整える。</h2>
+    <p>厚塗り感は避けたい。けれど何もしていないようには見せたくない。そんな日に、educate B の設計を確認してください。</p>
+    <div style="height:16px"></div>
+    <a class="cta" href="https://kuu-medic.jp/" target="_blank" rel="noopener noreferrer">educate B の商品詳細を見る</a>
+    <div class="cta-subnote" style="color:rgba(255,255,255,.72)">軽さ・ツヤ感・使いやすさのバランスをチェックできます。</div>
   </div>
 </section>
 
