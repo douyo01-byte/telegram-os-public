@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>educate B LP v7</title>
+<title>educate B LP v8</title>
 <style>
 :root {
   --bg:#f7f2ed;
@@ -273,6 +273,25 @@ h1 {
 .cta-final-strong .cta{background:#fff;color:#1f1f22}
 @media (max-width:900px){
   .visual-grid-4,.point-grid-3,.flow-steps{grid-template-columns:1fr}
+}
+
+
+.sales-grid-4{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.sales-card{background:#fff;border:1px solid var(--line);border-radius:26px;overflow:hidden}
+.sales-card img{width:100%;height:260px;object-fit:cover;display:block}
+.sales-card .txt{padding:18px}
+.sales-card .txt h3{margin:0 0 10px;font-size:24px;line-height:1.2}
+.sales-card .txt p{margin:0;color:var(--sub);font-size:16px}
+.evidence-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px}
+.evidence-card{background:#fff;border:1px solid var(--line);border-radius:26px;padding:24px}
+.evidence-card h3{margin:0 0 12px;font-size:22px;line-height:1.2}
+.evidence-card p{margin:0;color:var(--sub)}
+.cta-strong{background:#1f1f22;color:#fff;border-radius:30px;padding:34px}
+.cta-strong h2{margin:0 0 12px;color:#fff}
+.cta-strong p{color:rgba(255,255,255,.82)}
+.cta-strong .cta{background:#fff;color:#1f1f22}
+@media (max-width:900px){
+  .sales-grid-4,.evidence-grid{grid-template-columns:1fr}
 }
 
 </style>
@@ -557,40 +576,42 @@ h1 {
 
 
 <section class="section">
-  <div class="full-card">
-    <h2>見せ方を変えて、価値を伝える</h2>
-    <div class="visual-grid-4">
-      <div class="visual-card">
-        <img src="https://kuu-medic.com/cdn/shop/files/fit_cover_w_920_h_920.avif?v=1758074455" alt="educate B product">
-        <div class="cap">
-          <h3>商品そのものを主役に</h3>
-          <p>FVでは商品写真を大きく見せ、何の商品かを一目で伝えます。</p>
-        </div>
+  
+<div class="full-card">
+  <h2>見せ方を変えて、価値を伝える</h2>
+  <div class="sales-grid-4">
+    <div class="sales-card">
+      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjkwMCIgdmlld0JveD0iMCAwIDEyMDAgOTAwIj4KPGRlZnM+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeDI9IjEiIHkxPSIwIiB5Mj0iMSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZWZlMWQ0Ii8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkOGMwYWUiLz4KICA8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+CjxyZWN0IHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjkwMCIgZmlsbD0idXJsKCNnKSIvPgo8Y2lyY2xlIGN4PSI5ODAiIGN5PSIxNDAiIHI9IjE4MCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwuMjIpIi8+CjxjaXJjbGUgY3g9IjE2MCIgY3k9Ijc2MCIgcj0iMjIwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LC4xMCkiLz4KPHJlY3QgeD0iOTAiIHk9IjkwIiByeD0iMzgiIHJ5PSIzOCIgd2lkdGg9IjEwMjAiIGhlaWdodD0iNzIwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LC4zMikiLz4KPHRleHQgeD0iMTIwIiB5PSIyNTAiIGZvbnQtc2l6ZT0iNzIiIGZvbnQtZmFtaWx5PSJBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmIiBmaWxsPSIjM2IzMDJiIiBmb250LXdlaWdodD0iNzAwIj7ou73jgZXjgajmlbTjgaPjgZ/ljbDosaE8L3RleHQ+Cjx0ZXh0IHg9IjEyMCIgeT0iMzQ1IiBmb250LXNpemU9IjM0IiBmb250LWZhbWlseT0iQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZiIgZmlsbD0iIzNiMzAyYiIgb3BhY2l0eT0iMC44NCI+5Y6a5aGX44KK5oSf44KS6YG/44GR44Gq44GM44KJ44CB6Ieq54S244Gr6KaL44Gb44Gf44GE5pel44GrPC90ZXh0Pgo8dGV4dCB4PSIxMjAiIHk9Ijc2MCIgZm9udC1zaXplPSIyOCIgZm9udC1mYW1pbHk9IkFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWYiIGZpbGw9IiMzYjMwMmIiIG9wYWNpdHk9IjAuNTgiPkVEVUNBVEUgQiAvIFNBTEVTIFZJU1VBTDwvdGV4dD4KPC9zdmc+" alt="軽さと整った印象">
+      <div class="txt">
+        <h3>軽さと整った印象</h3>
+        <p>厚塗り感を避けたい日に向けて、仕上がりの方向性を先に伝える販売訴求です。</p>
       </div>
-      <div class="visual-card">
-        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjkwMCIgdmlld0JveD0iMCAwIDEyMDAgOTAwIj4KPGRlZnM+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeDI9IjEiIHkxPSIwIiB5Mj0iMSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZWZlMWQ0Ii8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkOGMwYWUiLz4KICA8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+CjxyZWN0IHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjkwMCIgZmlsbD0idXJsKCNnKSIvPgo8Y2lyY2xlIGN4PSI5ODAiIGN5PSIxNDAiIHI9IjE4MCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwuMjIpIi8+CjxjaXJjbGUgY3g9IjE2MCIgY3k9Ijc2MCIgcj0iMjIwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LC4xMikiLz4KPHJlY3QgeD0iOTAiIHk9IjkwIiByeD0iNDAiIHJ5PSI0MCIgd2lkdGg9IjEwMjAiIGhlaWdodD0iNzIwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LC4zMCkiLz4KPHRleHQgeD0iMTIwIiB5PSIyNjAiIGZvbnQtc2l6ZT0iNzQiIGZvbnQtZmFtaWx5PSJBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmIiBmaWxsPSIjM2IzMDJiIiBmb250LXdlaWdodD0iNzAwIj7ou73jgZXjgajmlbTjgaPjgZ/ljbDosaE8L3RleHQ+Cjx0ZXh0IHg9IjEyMCIgeT0iMzU1IiBmb250LXNpemU9IjM2IiBmb250LWZhbWlseT0iQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZiIgZmlsbD0iIzNiMzAyYiIgb3BhY2l0eT0iMC44MiI+5Y6a5aGX44KK5oSf44KS6YG/44GR44Gq44GM44KJ44CB6Ieq54S244Gr6KaL44Gb44Gf44GE5pel44GrPC90ZXh0Pgo8dGV4dCB4PSIxMjAiIHk9Ijc2MCIgZm9udC1zaXplPSIyOCIgZm9udC1mYW1pbHk9IkFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWYiIGZpbGw9IiMzYjMwMmIiIG9wYWNpdHk9IjAuNTgiPkVEVUNBVEUgQiAvIFNBTEVTIFZJU1VBTDwvdGV4dD4KPC9zdmc+" alt="軽さと整った印象">
-        <div class="cap">
-          <h3>軽さと整った印象</h3>
-          <p>厚塗り感を避けたい気分に寄り添う、販売訴求用ビジュアルです。</p>
-        </div>
+    </div>
+    <div class="sales-card">
+      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjkwMCIgdmlld0JveD0iMCAwIDEyMDAgOTAwIj4KPGRlZnM+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeDI9IjEiIHkxPSIwIiB5Mj0iMSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZjRlOGRlIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkOWM2YmEiLz4KICA8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+CjxyZWN0IHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjkwMCIgZmlsbD0idXJsKCNnKSIvPgo8Y2lyY2xlIGN4PSI5ODAiIGN5PSIxNDAiIHI9IjE4MCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwuMjIpIi8+CjxjaXJjbGUgY3g9IjE2MCIgY3k9Ijc2MCIgcj0iMjIwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LC4xMCkiLz4KPHJlY3QgeD0iOTAiIHk9IjkwIiByeD0iMzgiIHJ5PSIzOCIgd2lkdGg9IjEwMjAiIGhlaWdodD0iNzIwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LC4zMikiLz4KPHRleHQgeD0iMTIwIiB5PSIyNTAiIGZvbnQtc2l6ZT0iNzIiIGZvbnQtZmFtaWx5PSJBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmIiBmaWxsPSIjNDAzNDJlIiBmb250LXdlaWdodD0iNzAwIj7kub7nh6XmhJ/jgpLpgb/jgZHjgZ/jgYTml6Xjgbg8L3RleHQ+Cjx0ZXh0IHg9IjEyMCIgeT0iMzQ1IiBmb250LXNpemU9IjM0IiBmb250LWZhbWlseT0iQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZiIgZmlsbD0iIzQwMzQyZSIgb3BhY2l0eT0iMC44NCI+44GX44Gj44Go44KK5oSf44KS5oSP6K2Y44GX44Gf44OZ44O844K544Oh44Kk44Kv6Kit6KiIPC90ZXh0Pgo8dGV4dCB4PSIxMjAiIHk9Ijc2MCIgZm9udC1zaXplPSIyOCIgZm9udC1mYW1pbHk9IkFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWYiIGZpbGw9IiM0MDM0MmUiIG9wYWNpdHk9IjAuNTgiPkVEVUNBVEUgQiAvIFNBTEVTIFZJU1VBTDwvdGV4dD4KPC9zdmc+" alt="乾燥感を避けたい日へ">
+      <div class="txt">
+        <h3>乾燥感を避けたい日へ</h3>
+        <p>しっとり感を意識した使い心地を、説明文だけでなく視覚でも補強します。</p>
       </div>
-      <div class="visual-card">
-        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjkwMCIgdmlld0JveD0iMCAwIDEyMDAgOTAwIj4KPGRlZnM+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeDI9IjEiIHkxPSIwIiB5Mj0iMSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZjRlOGRlIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkOWM2YmEiLz4KICA8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+CjxyZWN0IHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjkwMCIgZmlsbD0idXJsKCNnKSIvPgo8Y2lyY2xlIGN4PSI5ODAiIGN5PSIxNDAiIHI9IjE4MCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwuMjIpIi8+CjxjaXJjbGUgY3g9IjE2MCIgY3k9Ijc2MCIgcj0iMjIwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LC4xMikiLz4KPHJlY3QgeD0iOTAiIHk9IjkwIiByeD0iNDAiIHJ5PSI0MCIgd2lkdGg9IjEwMjAiIGhlaWdodD0iNzIwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LC4zMCkiLz4KPHRleHQgeD0iMTIwIiB5PSIyNjAiIGZvbnQtc2l6ZT0iNzQiIGZvbnQtZmFtaWx5PSJBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmIiBmaWxsPSIjNDAzNDJlIiBmb250LXdlaWdodD0iNzAwIj7kub7nh6XmhJ/jgpLpgb/jgZHjgZ/jgYTml6Xjgbg8L3RleHQ+Cjx0ZXh0IHg9IjEyMCIgeT0iMzU1IiBmb250LXNpemU9IjM2IiBmb250LWZhbWlseT0iQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZiIgZmlsbD0iIzQwMzQyZSIgb3BhY2l0eT0iMC44MiI+44GX44Gj44Go44KK5oSf44KS5oSP6K2Y44GX44Gf44OZ44O844K544Oh44Kk44Kv6Kit6KiIPC90ZXh0Pgo8dGV4dCB4PSIxMjAiIHk9Ijc2MCIgZm9udC1zaXplPSIyOCIgZm9udC1mYW1pbHk9IkFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWYiIGZpbGw9IiM0MDM0MmUiIG9wYWNpdHk9IjAuNTgiPkVEVUNBVEUgQiAvIFNBTEVTIFZJU1VBTDwvdGV4dD4KPC9zdmc+" alt="乾燥感を避けたい日へ">
-        <div class="cap">
-          <h3>乾燥感を避けたい日へ</h3>
-          <p>しっとり感を意識した使い心地を、説明だけでなく視覚でも補います。</p>
-        </div>
+    </div>
+    <div class="sales-card">
+      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjkwMCIgdmlld0JveD0iMCAwIDEyMDAgOTAwIj4KPGRlZnM+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeDI9IjEiIHkxPSIwIiB5Mj0iMSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZWZlNmRmIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjZGI5YWIiLz4KICA8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+CjxyZWN0IHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjkwMCIgZmlsbD0idXJsKCNnKSIvPgo8Y2lyY2xlIGN4PSI5ODAiIGN5PSIxNDAiIHI9IjE4MCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwuMjIpIi8+CjxjaXJjbGUgY3g9IjE2MCIgY3k9Ijc2MCIgcj0iMjIwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LC4xMCkiLz4KPHJlY3QgeD0iOTAiIHk9IjkwIiByeD0iMzgiIHJ5PSIzOCIgd2lkdGg9IjEwMjAiIGhlaWdodD0iNzIwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LC4zMikiLz4KPHRleHQgeD0iMTIwIiB5PSIyNTAiIGZvbnQtc2l6ZT0iNzIiIGZvbnQtZmFtaWx5PSJBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmIiBmaWxsPSIjM2QzMTJiIiBmb250LXdlaWdodD0iNzAwIj7mnJ3jga7mmYLnn63jg6HjgqTjgq/jgavjgoI8L3RleHQ+Cjx0ZXh0IHg9IjEyMCIgeT0iMzQ1IiBmb250LXNpemU9IjM0IiBmb250LWZhbWlseT0iQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZiIgZmlsbD0iIzNkMzEyYiIgb3BhY2l0eT0iMC44NCI+6L+344GE44Gr44GP44GE44CB5q+O5pel5L2/44GE44KE44GZ44GE5pa55ZCR44G4PC90ZXh0Pgo8dGV4dCB4PSIxMjAiIHk9Ijc2MCIgZm9udC1zaXplPSIyOCIgZm9udC1mYW1pbHk9IkFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWYiIGZpbGw9IiMzZDMxMmIiIG9wYWNpdHk9IjAuNTgiPkVEVUNBVEUgQiAvIFNBTEVTIFZJU1VBTDwvdGV4dD4KPC9zdmc+" alt="朝の時短メイクにも">
+      <div class="txt">
+        <h3>朝の時短メイクにも</h3>
+        <p>毎日使いやすいことを、スマホで流し見しても伝わる構成に寄せます。</p>
       </div>
-      <div class="visual-card">
-        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjkwMCIgdmlld0JveD0iMCAwIDEyMDAgOTAwIj4KPGRlZnM+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeDI9IjEiIHkxPSIwIiB5Mj0iMSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZWZlNmRmIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjZGI5YWIiLz4KICA8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+CjxyZWN0IHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjkwMCIgZmlsbD0idXJsKCNnKSIvPgo8Y2lyY2xlIGN4PSI5ODAiIGN5PSIxNDAiIHI9IjE4MCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwuMjIpIi8+CjxjaXJjbGUgY3g9IjE2MCIgY3k9Ijc2MCIgcj0iMjIwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LC4xMikiLz4KPHJlY3QgeD0iOTAiIHk9IjkwIiByeD0iNDAiIHJ5PSI0MCIgd2lkdGg9IjEwMjAiIGhlaWdodD0iNzIwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LC4zMCkiLz4KPHRleHQgeD0iMTIwIiB5PSIyNjAiIGZvbnQtc2l6ZT0iNzQiIGZvbnQtZmFtaWx5PSJBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmIiBmaWxsPSIjM2QzMTJiIiBmb250LXdlaWdodD0iNzAwIj7mnJ3jga7mmYLnn63jg6HjgqTjgq/jgavjgoI8L3RleHQ+Cjx0ZXh0IHg9IjEyMCIgeT0iMzU1IiBmb250LXNpemU9IjM2IiBmb250LWZhbWlseT0iQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZiIgZmlsbD0iIzNkMzEyYiIgb3BhY2l0eT0iMC44MiI+6L+344GE44Gr44GP44GE44CB5q+O5pel5L2/44GE44KE44GZ44GE5pa55ZCR44G4PC90ZXh0Pgo8dGV4dCB4PSIxMjAiIHk9Ijc2MCIgZm9udC1zaXplPSIyOCIgZm9udC1mYW1pbHk9IkFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWYiIGZpbGw9IiMzZDMxMmIiIG9wYWNpdHk9IjAuNTgiPkVEVUNBVEUgQiAvIFNBTEVTIFZJU1VBTDwvdGV4dD4KPC9zdmc+" alt="朝の時短メイクにも">
-        <div class="cap">
-          <h3>朝の時短メイクにも</h3>
-          <p>毎日使いやすい方向性を、スマホでも流し見で伝わる形にしています。</p>
-        </div>
+    </div>
+    <div class="sales-card">
+      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjkwMCIgdmlld0JveD0iMCAwIDEyMDAgOTAwIj4KPGRlZnM+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeDI9IjEiIHkxPSIwIiB5Mj0iMSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZWFkYWNjIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjOWIwOWUiLz4KICA8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+CjxyZWN0IHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjkwMCIgZmlsbD0idXJsKCNnKSIvPgo8Y2lyY2xlIGN4PSI5ODAiIGN5PSIxNDAiIHI9IjE4MCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwuMjIpIi8+CjxjaXJjbGUgY3g9IjE2MCIgY3k9Ijc2MCIgcj0iMjIwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LC4xMCkiLz4KPHJlY3QgeD0iOTAiIHk9IjkwIiByeD0iMzgiIHJ5PSIzOCIgd2lkdGg9IjEwMjAiIGhlaWdodD0iNzIwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LC4zMikiLz4KPHRleHQgeD0iMTIwIiB5PSIyNTAiIGZvbnQtc2l6ZT0iNzIiIGZvbnQtZmFtaWx5PSJBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmIiBmaWxsPSIjMzQyOTIzIiBmb250LXdlaWdodD0iNzAwIj7mlbTjgYjjgabprYXjgZvjgos8L3RleHQ+Cjx0ZXh0IHg9IjEyMCIgeT0iMzQ1IiBmb250LXNpemU9IjM0IiBmb250LWZhbWlseT0iQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZiIgZmlsbD0iIzM0MjkyMyIgb3BhY2l0eT0iMC44NCI+6Zqg44GZ44Gf44KB44Gn44Gv44Gq44GP44CB5Y2w6LGh44KS5pW044GI44KL44Gf44KB44GuMeacrDwvdGV4dD4KPHRleHQgeD0iMTIwIiB5PSI3NjAiIGZvbnQtc2l6ZT0iMjgiIGZvbnQtZmFtaWx5PSJBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmIiBmaWxsPSIjMzQyOTIzIiBvcGFjaXR5PSIwLjU4Ij5FRFVDQVRFIEIgLyBTQUxFUyBWSVNVQUw8L3RleHQ+Cjwvc3ZnPg==" alt="整えて魅せる">
+      <div class="txt">
+        <h3>整えて魅せる</h3>
+        <p>隠すためではなく、整って見える印象づくりへつなげる最終訴求です。</p>
       </div>
     </div>
   </div>
+</div>
 </section>
+
 
 
 <section class="section">
