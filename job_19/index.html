@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>educate B LP v15</title>
+<title>educate B LP v16</title>
 <style>
 :root {
   --bg:#f7f2ed;
@@ -24,15 +24,15 @@ img { display:block; max-width:100%; }
 .wrap {
   width:min(100%,1180px);
   margin:0 auto;
-  padding:28px 18px 84px;
+  padding:18px 14px 72px;
 }
 .hero {
-  padding:30px 0 40px;
+  padding:18px 0 28px;
 }
 .hero-grid {
   display:grid;
   grid-template-columns:1.05fr .95fr;
-  gap:34px;
+  gap:20px;
   align-items:center;
 }
 .eyebrow {
@@ -43,53 +43,53 @@ img { display:block; max-width:100%; }
 }
 h1 {
   margin:0 0 18px;
-  font-size:clamp(42px,7vw,82px);
-  line-height:1.06;
+  font-size:clamp(34px,9vw,58px);
+  line-height:1.12;
   letter-spacing:-0.04em;
 }
 .lead {
   margin:0 0 22px;
   color:var(--sub);
-  font-size:clamp(18px,2.5vw,30px);
+  font-size:clamp(16px,4.8vw,24px);
 }
 .benefit-row {
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:16px;
+  gap:12px;
   margin:26px 0 20px;
 }
 .benefit-card {
   background:rgba(255,255,255,.8);
   border:1px solid var(--line);
-  border-radius:24px;
-  padding:20px 18px;
-  min-height:110px;
+  border-radius:20px;
+  padding:16px 14px;
+  min-height:92px;
   display:flex;
   align-items:center;
-  font-size:18px;
+  font-size:16px;
 }
 .cta {
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  min-height:68px;
-  padding:0 30px;
+  min-height:60px;
+  padding:0 22px;
   border-radius:999px;
   background:#1f1f22;
   color:#fff;
   text-decoration:none;
-  font-size:20px;
+  font-size:16px;
   font-weight:800;
   letter-spacing:.01em;
   margin-top:4px;
 }
 .subline {
-  margin-top:18px;
+  margin-top:14px;
   color:#7f726c;
   font-size:16px;
 }
 .hero-visual {
-  min-height:560px;
+  min-height:300px;
   border-radius:34px;
   border:1px solid var(--line);
   background-size:cover;
@@ -101,7 +101,7 @@ h1 {
   justify-content:center;
 }
 .hero-product {
-  width:86%;
+  width:80%;
   max-width:520px;
   object-fit:contain;
   filter:drop-shadow(0 20px 30px rgba(0,0,0,.12));
@@ -112,7 +112,7 @@ h1 {
   text-align:center;
 }
 .placeholder-over {
-  font-size:18px;
+  font-size:16px;
   letter-spacing:.14em;
   margin-bottom:18px;
 }
@@ -122,27 +122,27 @@ h1 {
   line-height:1.08;
 }
 .section {
-  padding:58px 0;
+  padding:34px 0;
 }
 .section-grid {
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:28px;
+  gap:12px;
 }
 .card {
   background:var(--paper);
   border:1px solid var(--line);
-  border-radius:30px;
-  padding:30px;
+  border-radius:22px;
+  padding:22px 18px;
 }
 .card h2 {
   margin:0 0 16px;
-  font-size:clamp(28px,4vw,52px);
+  font-size:clamp(24px,6vw,36px);
   line-height:1.12;
   letter-spacing:-0.03em;
 }
 .card p, .card li {
-  font-size:18px;
+  font-size:16px;
 }
 .card ul {
   margin:16px 0 0;
@@ -151,12 +151,12 @@ h1 {
 .gallery-wrap {
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:18px;
-  margin-top:18px;
+  gap:12px;
+  margin-top:14px;
 }
 .gallery-item {
-  min-height:280px;
-  border-radius:24px;
+  min-height:180px;
+  border-radius:20px;
   border:1px solid var(--line);
   background-size:cover;
   background-position:center;
@@ -166,7 +166,7 @@ h1 {
   overflow:hidden;
 }
 .gallery-product {
-  width:82%;
+  width:74%;
   object-fit:contain;
   filter:drop-shadow(0 14px 24px rgba(0,0,0,.10));
 }
@@ -178,12 +178,12 @@ h1 {
 .summary-grid {
   display:grid;
   grid-template-columns:.92fr 1.08fr;
-  gap:28px;
+  gap:12px;
   align-items:center;
 }
 .summary-shot {
-  min-height:460px;
-  border-radius:30px;
+  min-height:280px;
+  border-radius:22px;
   border:1px solid var(--line);
   background-size:cover;
   background-position:center;
@@ -194,11 +194,18 @@ h1 {
   background:#f7f1eb;
 }
 .summary-shot img {
-  width:84%;
+  width:76%;
   object-fit:contain;
   filter:drop-shadow(0 16px 26px rgba(0,0,0,.12));
 }
 @media (max-width:900px) {
+    .wrap { padding:12px 12px 56px; }
+    .card { padding:18px 14px; }
+    .benefit-card { font-size:15px; }
+    .cta { width:100%; }
+    .gallery-product { width:68%; }
+    .hero-product { width:74%; }
+
   .hero-grid,
   .section-grid,
   .summary-grid,
@@ -206,34 +213,34 @@ h1 {
   .gallery-wrap {
     grid-template-columns:1fr;
   }
-  .hero-visual { min-height:420px; }
-  .summary-shot { min-height:340px; }
+  .hero-visual { min-height:300px; }
+  .summary-shot { min-height:240px; }
   h1 { font-size:clamp(40px,12vw,66px); }
 }
 
 .sales-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .sales-card{background:var(--paper);border:1px solid var(--line);border-radius:28px;padding:28px}
 .sales-card h3{margin:0 0 12px;font-size:26px;line-height:1.2}
-.full-card{background:var(--paper);border:1px solid var(--line);border-radius:30px;padding:34px}
+.full-card{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:34px}
 .full-card h2{margin:0 0 16px;font-size:clamp(28px,4vw,48px);line-height:1.15}
 .full-card p,.full-card li{font-size:18px}
 .full-card ul{margin:16px 0 0;padding-left:1.2em}
 .spec-table{display:grid;gap:0}
-.spec-row{display:grid;grid-template-columns:220px 1fr;gap:18px;padding:16px 0;border-bottom:1px solid var(--line)}
+.spec-row{display:grid;grid-template-columns:220px 1fr;gap:12px;padding:16px 0;border-bottom:1px solid var(--line)}
 .spec-key{font-weight:800}
 .spec-val{color:var(--sub)}
 .cta-stack{display:flex;flex-direction:column;gap:14px;align-items:flex-start}
 .note-soft{color:var(--sub);font-size:16px}
 .big-gallery{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.big-shot{min-height:340px;border:1px solid var(--line);border-radius:26px;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.big-shot img{width:84%;object-fit:contain;filter:drop-shadow(0 16px 26px rgba(0,0,0,.12))}
+.big-shot{min-height:240px;border:1px solid var(--line);border-radius:26px;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.big-shot img{width:76%;object-fit:contain;filter:drop-shadow(0 16px 26px rgba(0,0,0,.12))}
 @media (max-width:900px){
   .sales-grid,.big-gallery{grid-template-columns:1fr}
   .spec-row{grid-template-columns:1fr}
 }
 
 
-.compare-table{display:grid;gap:0;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:#fff}
+.compare-table{display:grid;gap:0;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:#fff}
 .compare-row{display:grid;grid-template-columns:220px 1fr 1fr;gap:0}
 .compare-row > div{padding:16px 18px;border-bottom:1px solid var(--line)}
 .compare-head{background:#f2e7dc;font-weight:800}
@@ -244,8 +251,8 @@ h1 {
 .cta-strong{display:inline-flex;align-items:center;justify-content:center;min-height:72px;padding:0 34px;border-radius:999px;background:#1f1f22;color:#fff;text-decoration:none;font-size:21px;font-weight:800;letter-spacing:.01em}
 .cta-subnote{margin-top:14px;color:var(--sub);font-size:16px}
 .role-gallery{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.role-shot{min-height:280px;border:1px solid var(--line);border-radius:24px;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.role-shot img{width:84%;object-fit:contain;filter:drop-shadow(0 16px 26px rgba(0,0,0,.12))}
+.role-shot{min-height:180px;border:1px solid var(--line);border-radius:20px;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.role-shot img{width:76%;object-fit:contain;filter:drop-shadow(0 16px 26px rgba(0,0,0,.12))}
 .role-label{padding:10px 14px 0;color:#8d756a;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
 @media (max-width:900px){
   .compare-row{grid-template-columns:1fr}
@@ -286,7 +293,7 @@ h1 {
 .evidence-card{background:#fff;border:1px solid var(--line);border-radius:26px;padding:24px}
 .evidence-card h3{margin:0 0 12px;font-size:22px;line-height:1.2}
 .evidence-card p{margin:0;color:var(--sub)}
-.cta-strong{background:#1f1f22;color:#fff;border-radius:30px;padding:34px}
+.cta-strong{background:#1f1f22;color:#fff;border-radius:22px;padding:34px}
 .cta-strong h2{margin:0 0 12px;color:#fff}
 .cta-strong p{color:rgba(255,255,255,.82)}
 .cta-strong .cta{background:#fff;color:#1f1f22}
@@ -295,7 +302,7 @@ h1 {
 }
 
 
-.visual-4{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+.visual-4{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
 .visual-card{background:#fff;border:1px solid var(--line);border-radius:26px;overflow:hidden}
 .visual-card img{width:100%;height:240px;object-fit:cover;display:block}
 .visual-card .cap{padding:16px 18px}
@@ -311,7 +318,7 @@ h1 {
 
 
 .fake-card{
-  min-height:280px;
+  min-height:180px;
   border:1px solid #eadfd6;
   border-radius:28px;
   background:linear-gradient(180deg,#fffdfa 0%,#f6eee8 100%);
@@ -372,6 +379,8 @@ h1 {
 </div><div class="benefit-card">乾燥感を避けながら心地よく使える</div><div class="benefit-card">ベースメイク時間を上質なケア発想へ</div></div>
           <a class="cta" href="https://kuu-medic.com/products/educate-b" target="_blank" rel="noopener noreferrer">自分の肌印象を整える一歩を始める</a>
           <div class="subline">隠すためではなく、整えて魅せるためのベースメイク発想。</div>
+            <div style="height:10px"></div>
+            <div style="font-size:13px;color:#8c8078;">毎 日 の ベ ー ス メ イ ク を 、 重 た く し す ぎ ず に 整 え た い 方 へ</div>
         </div>
         <div>
 <div class="hero-visual" style="background:#f7f1eb">
