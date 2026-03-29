@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="ja">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
-<title>educate B | 厚塗り感を抑えて自然なツヤ肌に整えたい人向け LP v100</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>educate B | 厚 塗 り 感 を 抑 え て 自 然 な ツ ヤ 肌 に 整 え た い 人 向 け LP v101</title>
 <style>
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
@@ -33,11 +32,13 @@ background:linear-gradient(135deg,rgba(255,255,255,.98) 0%,rgba(250,241,234,.95)
 }
 .card{padding:0}
 .section-inner{padding:30px}
-.hero-grid,.grid-2,.grid-3,.gallery{display:grid;gap:22px}
+.hero-grid,.grid-2,.grid-3,.gallery,.story-grid,.generated-grid{display:grid;gap:22px}
 .hero-grid{grid-template-columns:1.08fr .92fr;align-items:center;gap:28px}
 .grid-2{grid-template-columns:1fr 1fr}
 .grid-3{grid-template-columns:repeat(3,1fr)}
 .gallery{grid-template-columns:repeat(2,1fr);gap:18px}
+.story-grid{grid-template-columns:1.1fr .9fr}
+.generated-grid{grid-template-columns:repeat(3,1fr)}
 .eyebrow{
 display:inline-block;
 margin-bottom:12px;
@@ -50,16 +51,23 @@ font-weight:700;
 letter-spacing:.08em;
 }
 h1{font-size:58px;line-height:1.04;margin:0 0 18px;letter-spacing:-.02em}
-h2{font-size:32px;line-height:1.28;margin:0 0 14px;letter-spacing:-.015em}
+h2{font-size:32px;line-height:1.3;margin:0 0 14px;letter-spacing:-.01em}
 h3{font-size:20px;line-height:1.4;margin:0 0 8px}
 .lead{font-size:18px;line-height:1.95;color:#5c493f;margin:0 0 22px}
-.points,.feature-list,.faq{display:grid;gap:14px}
-.point,.feature,.faq-item{
-background:linear-gradient(180deg,#fff 0%,#fdfaf7 100%);
+.points,.feature-list,.faq,.hero-proof{display:grid;gap:14px}
+.point,.feature,.faq-item,.proof{
+background:#fff;
 border:1px solid #eadfd7;
 border-radius:22px;
 padding:18px;
-box-shadow:0 8px 22px rgba(76,52,39,.05);
+box-shadow:0 6px 18px rgba(76,52,39,.04);
+}
+.hero-proof{grid-template-columns:repeat(3,1fr);margin-top:14px}
+.proof{
+font-size:14px;
+line-height:1.68;
+color:#5b473d;
+font-weight:500;
 }
 .num{
 display:inline-flex;
@@ -75,7 +83,7 @@ font-weight:700;
 margin-bottom:12px;
 }
 .research-note,.copy,.offer-text,.faq-a{font-size:14px;line-height:1.9;color:#5f4a3f}
-.visual-main img,.hero-visual img,.gallery img,.gallery-single img,.single-generated img{
+.visual-main img,.hero-visual img,.gallery img,.gallery-single img,.single-generated img,.story-grid img,.generated-grid img{
 width:100%;
 height:auto;
 border-radius:26px;
@@ -83,8 +91,7 @@ object-fit:cover;
 box-shadow:0 14px 34px rgba(76,52,39,.12);
 }
 .item .copy{margin-top:10px}
-.gallery-single{max-width:760px;margin:0 auto}
-.single-generated figcaption{margin-top:12px;text-align:center;font-size:14px;line-height:1.8;color:#5f4a3f}
+.generated-grid .item .copy{margin-top:12px;text-align:center}
 .cta-row{display:flex;gap:14px;flex-wrap:wrap}
 .cta{
 display:inline-flex;
@@ -104,23 +111,6 @@ color:#fff;
 .cta.sub{
 background:linear-gradient(180deg,#f6ebe3 0%,#efdfd3 100%);
 color:#5e4638;
-}
-.hero-proof{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:14px;
-margin-top:18px;
-}
-.hero-proof .proof{
-background:rgba(255,255,255,.9);
-border:1px solid #eadfd7;
-border-radius:18px;
-padding:14px 16px;
-font-size:14px;
-line-height:1.68;
-color:#5b473d;
-box-shadow:0 6px 16px rgba(76,52,39,.05);
-font-weight:500;
 }
 .offer-box{padding:28px}
 .offer-title{font-size:28px;line-height:1.45;margin:0 0 10px}
@@ -146,7 +136,7 @@ box-shadow:0 14px 34px rgba(76,52,39,.16);
 backdrop-filter:blur(10px);
 }
 @media (max-width: 920px){
-.hero-grid,.grid-2,.grid-3,.gallery{grid-template-columns:1fr}
+.hero-grid,.grid-2,.grid-3,.gallery,.story-grid,.generated-grid,.hero-proof{grid-template-columns:1fr}
 .hero-card{padding:24px}
 .section{padding:22px 0}
 .section-inner{padding:22px}
@@ -164,22 +154,20 @@ body{font-size:15px}
 h1{font-size:32px;line-height:1.16;letter-spacing:-.01em}
 h2{font-size:23px;line-height:1.34}
 .lead{font-size:15px;line-height:1.82}
-.point,.feature,.faq-item{padding:15px}
+.point,.feature,.faq-item,.proof{padding:15px}
 .eyebrow{margin-bottom:10px;padding:5px 10px;font-size:11px}
 .cta-row{display:grid;grid-template-columns:1fr;gap:10px}
 .cta{width:100%;min-height:56px;font-size:16px;padding:0 16px}
-.hero-visual img{border-radius:20px}
-.gallery img,.gallery-single img,.visual-main img{border-radius:20px}
+.hero-visual img,.gallery img,.generated-grid img,.story-grid img,.visual-main img{border-radius:20px}
 .sticky{padding:0 8px 8px}
 .sticky .inner{gap:8px;padding:8px 10px calc(10px + env(safe-area-inset-bottom))}
 .sticky .cta{min-height:52px;font-size:15px}
-.hero-proof{grid-template-columns:1fr;gap:10px;margin-top:14px}
-.hero-proof .proof{padding:12px 14px;font-size:13px;line-height:1.65}
 }
 </style>
 </head>
 <body>
 <div class="wrap">
+
 <section class="hero">
 <div class="hero-card">
 <div class="hero-grid">
@@ -193,8 +181,8 @@ h2{font-size:23px;line-height:1.34}
 <div class="point">乾燥が気になる日にも取り入れやすい</div>
 </div>
 <div class="cta-row">
-<a class="cta main" href="https://kuu-medic.jp/products/brand-amyu/educate/" rel="noopener noreferrer" target="_blank">商品詳細を見る</a>
-<a class="cta sub" href="https://kuushop.stores.jp/items/674aa46e72c3a43883565003" rel="noopener noreferrer" target="_blank">購入ページへ進む</a>
+<a class="cta main" href="https://kuushop.stores.jp/items/674aa46e72c3a43883565003" target="_blank" rel="noopener noreferrer">購 入 ペ ー ジ へ 進 む </a>
+<a class="cta sub" href="https://kuushop.stores.jp/items/674aa46e72c3a43883565003" target="_blank" rel="noopener noreferrer">す ぐ に 商 品 を 見 る </a>
 </div>
 <div class="hero-proof">
 <div class="proof">厚塗り感を抑えながら、きちんと整った印象を目指しやすい設計。</div>
@@ -203,11 +191,12 @@ h2{font-size:23px;line-height:1.34}
 </div>
 </div>
 <div class="hero-visual">
-<img alt="educate B" src="https://imagedelivery.net/QondspN4HIUvB_R16-ddAQ/62d50282e50c0b3a0f4e2fd4/e7835ee40665562e10b2.jpg/fit=cover,w=460,h=460"/>
+<img src="https://imagedelivery.net/QondspN4HIUvB_R16-ddAQ/62d50282e50c0b3a0f4e2fd4/e7835ee40665562e10b2.jpg/fit=cover,w=460,h=460" alt="educate B">
 </div>
 </div>
 </div>
 </section>
+
 <section class="section">
 <div class="card">
 <div class="section-inner">
@@ -215,14 +204,16 @@ h2{font-size:23px;line-height:1.34}
 <h2>使用シーンをイメージしやすい追加ビジュアル</h2>
 <div class="gallery-single">
 <figure class="single-generated">
-<img alt="educate B generated visual 1" src="https://douyo01-byte.github.io/telegram-os-public/generated_lp/educate_b_job22_v53/gen_1.webp"/>
-<figcaption>朝のメイク時間にも取り入れやすい、やわらかな印象の使用イメージ</figcaption>
+<img src="https://douyo01-byte.github.io/telegram-os-public/generated_lp/educate_b_job22_v53/gen_1.webp" alt="educate B generated visual 1">
+<figcaption>朝 の メ イ ク 時 間 に 取 り 入 れ や す い 使 用 イ メ ー ジ </figcaption>
 </figure>
 </div>
 <p class="research-note">商品画像に加えて、使う場面まで思い浮かべやすい追加ビジュアルを掲載しています。</p>
+
 </div>
 </div>
 </section>
+
 <section class="section">
 <div class="grid-2">
 <div class="card">
@@ -241,13 +232,14 @@ h2{font-size:23px;line-height:1.34}
 <div class="section-inner">
 <div class="eyebrow">LIFESTYLE</div>
 <div class="visual-main">
-<img alt="educate B usage" src="https://imagedelivery.net/QondspN4HIUvB_R16-ddAQ/62d50282e50c0b3a0f4e2fd4/56c933284602f0ff58ba.jpg/fit=cover,w=460,h=460"/>
+<img src="https://imagedelivery.net/QondspN4HIUvB_R16-ddAQ/62d50282e50c0b3a0f4e2fd4/56c933284602f0ff58ba.jpg/fit=cover,w=460,h=460" alt="educate B usage">
 </div>
 <p class="research-note">使用イメージまで伝えやすいビジュアル</p>
 </div>
 </div>
 </div>
 </section>
+
 <section class="section">
 <div class="card">
 <div class="section-inner">
@@ -257,6 +249,7 @@ h2{font-size:23px;line-height:1.34}
 </div>
 </div>
 </section>
+
 <section class="section">
 <div class="card">
 <div class="section-inner">
@@ -281,6 +274,7 @@ h2{font-size:23px;line-height:1.34}
 </div>
 </div>
 </section>
+
 <section class="section">
 <div class="card">
 <div class="section-inner">
@@ -288,7 +282,7 @@ h2{font-size:23px;line-height:1.34}
 <h2>成分の見せ方まで含めて理解しやすい</h2>
 <div class="grid-2">
 <div>
-<img alt="educate B ingredients" src="https://imagedelivery.net/QondspN4HIUvB_R16-ddAQ/62d50282e50c0b3a0f4e2fd4/2fbcb598258f5a04a1da.jpg/fit=cover,w=460,h=460"/>
+<img src="https://imagedelivery.net/QondspN4HIUvB_R16-ddAQ/62d50282e50c0b3a0f4e2fd4/2fbcb598258f5a04a1da.jpg/fit=cover,w=460,h=460" alt="educate B ingredients">
 </div>
 <div class="feature-list">
 <div class="feature"><div class="num">01</div><h2>ザクロ種子油</h2><p>乾燥した肌にうるおいを与える方向で紹介されている成分です。</p></div>
@@ -300,37 +294,54 @@ h2{font-size:23px;line-height:1.34}
 </div>
 </div>
 </section>
+
 <section class="section">
 <div class="card">
 <div class="section-inner">
 <div class="eyebrow">PRODUCT DETAIL</div>
 <h2>商品ディテール</h2>
+<div class="story-grid">
+<div>
+<img src="https://imagedelivery.net/QondspN4HIUvB_R16-ddAQ/62d50282e50c0b3a0f4e2fd4/69f07e42491748b482a2.jpg/fit=cover,w=460,h=460" alt="educate B front">
+</div>
+<div class="feature-list">
+<div class="feature">
+<div class="num">DETAIL 01</div>
+<h2>見 た 目 の 重 さ を 出 し す ぎ な い</h2>
+<p>ベ ー ス メ イ ク を 厚 く 重 ね た 印 象 に 寄 せ す ぎ ず 、 き ち ん と 感 を 残 し や す い 設 計 で す 。 </p>
+</div>
+<div class="feature">
+<div class="num">DETAIL 02</div>
+<h2>自 然 な ツ ヤ 感 を 意 識 し や す い</h2>
+<p>素 肌 感 を 残 し な が ら 、 明 る く 整 っ た 雰 囲 気 を 目 指 し や す い 見 せ 方 に 寄 せ て い ま す 。 </p>
+</div>
+</div>
+</div>
 <div class="gallery">
 <div class="item">
-<img alt="educate B front" src="https://imagedelivery.net/QondspN4HIUvB_R16-ddAQ/62d50282e50c0b3a0f4e2fd4/69f07e42491748b482a2.jpg/fit=cover,w=460,h=460"/>
-<div class="copy">商品設計を伝えやすい正面カット</div>
+<img src="https://imagedelivery.net/QondspN4HIUvB_R16-ddAQ/62d50282e50c0b3a0f4e2fd4/c11d0472cd37a4c25e25.jpg/fit=cover,w=460,h=460" alt="educate B package">
+<div class="copy">質 感 を 伝 え や す い 俯 瞰 カ ッ ト </div>
 </div>
 <div class="item">
-<img alt="educate B package" src="https://imagedelivery.net/QondspN4HIUvB_R16-ddAQ/62d50282e50c0b3a0f4e2fd4/c11d0472cd37a4c25e25.jpg/fit=cover,w=460,h=460"/>
-<div class="copy">質感を伝えやすい俯瞰カット</div>
+<img src="https://imagedelivery.net/QondspN4HIUvB_R16-ddAQ/62d50282e50c0b3a0f4e2fd4/e7835ee40665562e10b2.jpg/fit=cover,w=460,h=460" alt="educate B texture">
+<div class="copy">使 用 イ メ ー ジ と 合 わ せ て 仕 上 が り を 想 像 し や す い カ ッ ト </div>
 </div>
 </div>
 </div>
 </div>
 </section>
+
 <section class="section">
 <div class="card">
 <div class="section-inner">
 <div class="eyebrow">SPECIAL OFFER</div>
 <h2>まずは商品詳細と購入ページをまとめて確認</h2>
 <p class="offer-text">使用感・成分・商品情報を確認してから、そのまま購入ページへ進める構成です。</p>
-<div class="cta-row">
-<a class="cta main" href="https://kuu-medic.jp/products/brand-amyu/educate/" rel="noopener noreferrer" target="_blank">商品詳細を見る</a>
-<a class="cta sub" href="https://kuushop.stores.jp/items/674aa46e72c3a43883565003" rel="noopener noreferrer" target="_blank">購入ページへ進む</a>
-</div>
+
 </div>
 </div>
 </section>
+
 <section class="section">
 <div class="card">
 <div class="section-inner">
@@ -353,22 +364,24 @@ h2{font-size:23px;line-height:1.34}
 </div>
 </div>
 </section>
+
 <section class="section">
 <div class="final section-inner">
 <div class="eyebrow">FINAL</div>
 <h2>まずは商品詳細で自分に合うか確認</h2>
 <p>使い心地や仕上がりイメージを確認してから、購入ページへ進める構成です。</p>
 <div class="cta-row">
-<a class="cta main" href="https://kuu-medic.jp/products/brand-amyu/educate/" rel="noopener noreferrer" target="_blank">商品詳細を見る</a>
-<a class="cta sub" href="https://kuushop.stores.jp/items/674aa46e72c3a43883565003" rel="noopener noreferrer" target="_blank">購入ページへ進む</a>
+<a class="cta main" href="https://kuushop.stores.jp/items/674aa46e72c3a43883565003" target="_blank" rel="noopener noreferrer">購 入 ペ ー ジ へ 進 む </a>
+<a class="cta sub" href="https://kuushop.stores.jp/items/674aa46e72c3a43883565003" target="_blank" rel="noopener noreferrer">す ぐ に 商 品 を 見 る </a>
 </div>
 </div>
 </section>
+
 <div class="sticky">
 <div class="inner">
-<a class="cta main" href="https://kuu-medic.jp/products/brand-amyu/educate/" rel="noopener noreferrer" target="_blank">商品詳細</a>
-<a class="cta sub" href="https://kuushop.stores.jp/items/674aa46e72c3a43883565003" rel="noopener noreferrer" target="_blank">購入ページ</a>
+<a class="cta main" href="https://kuushop.stores.jp/items/674aa46e72c3a43883565003" target="_blank" rel="noopener noreferrer">購 入 ペ ー ジ </a>
+<a class="cta sub" href="https://kuushop.stores.jp/items/674aa46e72c3a43883565003" target="_blank" rel="noopener noreferrer">商 品 詳 細 </a>
 </div>
 </div>
-</div></body>
+</body>
 </html>
