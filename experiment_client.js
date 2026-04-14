@@ -1,6 +1,6 @@
 (function () {
   var EC_BASE = "https://openclaw-fortune-order.openclaw-fortune.workers.dev";
-  var EXPERIMENT_ID = 1;
+  var EXPERIMENT_ID = window.OCLAW_EXPERIMENT_ID || 1;
   var assigned = null;
 
   function getSessionId() {
