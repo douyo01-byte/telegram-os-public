@@ -785,7 +785,7 @@ html[data-exp-variant="B"] .exp-subcopy{
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   try {
-    fetch("https://openclaw-fortune.pages.dev/events", {
+    fetch("https://openclaw-fortune-order.openclaw-fortune.workers.dev/events", {
       method: "POST",
       headers: {"Content-Type": "application/json"},
       body: JSON.stringify({
@@ -797,7 +797,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.querySelectorAll("a").forEach(a => {
       a.addEventListener("click", () => {
-        fetch("https://openclaw-fortune.pages.dev/events", {
+        fetch("https://openclaw-fortune-order.openclaw-fortune.workers.dev/events", {
           method: "POST",
           headers: {"Content-Type": "application/json"},
           body: JSON.stringify({

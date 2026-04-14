@@ -52,7 +52,7 @@ p{font-size:17px}
 (async () => {
   try {
     const expId = 4;
-    const res = await fetch("https://openclaw-fortune.pages.dev/assign?experiment_id=" + expId);
+    const res = await fetch("https://openclaw-fortune-order.openclaw-fortune.workers.dev/assign?experiment_id=" + expId);
     const data = await res.json();
 
     if (data.variant === "B") {
