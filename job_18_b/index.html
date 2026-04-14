@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ja">
+<html lang="ja" data-exp-variant="B">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -212,5 +212,39 @@ html[data-exp-variant="B"] .exp-subcopy{
 </div>
 <script>window.OCLAW_EXPERIMENT_ID = 2;</script>
 <script src="/experiment_client.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  try {
+    fetch("https://openclaw-fortune.pages.dev/events", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({
+        experiment_id: 2,
+        event_type: "impression",
+        variant: "B"
+      })
+    });
+
+    document.querySelectorAll("a").forEach(a => {
+      a.addEventListener("click", () => {
+        fetch("https://openclaw-fortune.pages.dev/events", {
+          method: "POST",
+          headers: {"Content-Type": "application/json"},
+          body: JSON.stringify({
+            experiment_id: 2,
+            event_type: "conversion",
+            variant: "B"
+          })
+        });
+      });
+    });
+
+  } catch(e) {
+    console.log(e);
+  }
+});
+</script>
+
 </body>
 </html>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ja">
+<html lang="ja" data-exp-variant="A">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -47,6 +47,23 @@ p{font-size:17px}
 .sticky .inner{flex-direction:column}
 }
 </style>
+
+<script>
+(async () => {
+  try {
+    const expId = 4;
+    const res = await fetch("https://openclaw-fortune.pages.dev/assign?experiment_id=" + expId);
+    const data = await res.json();
+
+    if (data.variant === "B") {
+      location.replace("./../job_20_b/");
+    }
+  } catch(e) {
+    console.log("assign error", e);
+  }
+})();
+</script>
+
 </head>
 <body>
 <div class="wrap">
